@@ -6,116 +6,76 @@
 
   <title>Ashraf Creative Studio</title>
 
-  <meta name="description" content="Professional Design Studio - Web Design, Video Editing, Logo Design">
-  <meta name="keywords" content="web design, logo design, video editing, graphic design">
-
-  <!-- CSS -->
   <link rel="stylesheet" href="style.css">
 
-  <!-- AOS Animation -->
+  <!-- AOS -->
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-
-  <!-- Google Font -->
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 </head>
 
 <body>
 
-  <!-- HERO SECTION -->
   <section class="hero">
 
-    <div class="hero-content">
+    <h1 data-aos="fade-up">Ashraf Creative Studio</h1>
 
-      <h1 data-aos="fade-up">Ashraf Creative Studio</h1>
-
-      <p data-aos="fade-up" data-aos-delay="200">
-        We build modern websites, creative logos & high-quality videos
-      </p>
-
-      <a href="#contact">
-        <button data-aos="zoom-in" data-aos-delay="400">Get Started</button>
-      </a>
-
-    </div>
-
-  </section>
-
-  <!-- ABOUT -->
-  <section class="section" data-aos="fade-up">
-    <h2>About Me</h2>
-    <p>
-      I am a creative designer specializing in web design, branding, and video editing with modern and clean style.
+    <p data-aos="fade-up" data-aos-delay="200">
+      Web Design - Logo Design - Video Editing
     </p>
+
   </section>
 
-  <!-- SERVICES -->
   <section class="section" data-aos="fade-up">
+    <h2>About</h2>
+    <p>Professional designer creating modern digital experiences.</p>
+  </section>
 
+  <section class="section" data-aos="fade-up">
     <h2>Services</h2>
 
     <div class="grid">
 
       <div class="card">
         <h3>Web Design</h3>
-        <p>Modern responsive websites with clean UI/UX</p>
       </div>
 
       <div class="card">
         <h3>Logo Design</h3>
-        <p>Unique branding identity for your business</p>
       </div>
 
       <div class="card">
         <h3>Video Editing</h3>
-        <p>Professional marketing & social media videos</p>
       </div>
 
     </div>
-
   </section>
 
-  <!-- PORTFOLIO -->
-  <section class="section" data-aos="fade-up">
-    <h2>My Work</h2>
-    <p>Showcase of creative projects and past work</p>
-  </section>
+  <section class="section contact" data-aos="fade-up">
 
-  <!-- CONTACT FORM -->
-  <section class="section contact" id="contact" data-aos="fade-up">
-
-    <h2>Contact Me</h2>
-    <p>Send your request and I will reply quickly</p>
+    <h2>Contact</h2>
 
     <form id="contactForm">
 
-      <select id="method" required>
-        <option value="">Preferred Contact Method</option>
+      <select id="method">
+        <option value="">Contact Method</option>
         <option value="WhatsApp">WhatsApp</option>
         <option value="Email">Email</option>
       </select>
 
-      <select id="service" required>
-        <option value="">Select Service</option>
+      <select id="service">
+        <option value="">Service</option>
         <option value="Web Design">Web Design</option>
         <option value="Logo Design">Logo Design</option>
         <option value="Video Editing">Video Editing</option>
-        <option value="Other">Other</option>
       </select>
 
-      <textarea id="message" placeholder="Describe your project..." required></textarea>
+      <textarea id="message" placeholder="Your message"></textarea>
 
-      <button type="submit">Send Message</button>
+      <button type="submit">Send</button>
 
     </form>
 
   </section>
 
-  <!-- FOOTER -->
-  <footer>
-    <p>© 2026 Ashraf Creative Studio - All Rights Reserved</p>
-  </footer>
-
-  <!-- SCRIPTS -->
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script src="script.js"></script>
 
