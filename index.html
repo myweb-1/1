@@ -4,80 +4,100 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Ashraf Creative Studio</title>
+  <title>Creative Studio</title>
 
   <link rel="stylesheet" href="style.css">
-
-  <!-- AOS -->
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 </head>
 
 <body>
 
-  <section class="hero">
+<!-- LANGUAGE SWITCH -->
+<div class="lang-switch">
+  <button onclick="setLang('en')">EN</button>
+  <button onclick="setLang('ar')">AR</button>
+</div>
 
-    <h1 data-aos="fade-up">Ashraf Creative Studio</h1>
-
+<!-- HERO -->
+<section class="hero">
+  <div>
+    <h1 id="title" data-aos="fade-up">Creative Studio</h1>
     <p data-aos="fade-up" data-aos-delay="200">
-      Web Design - Logo Design - Video Editing
+      Web Design - Logo Design - Video Editing - QR Design
     </p>
+    <a href="#contact"><button data-aos="zoom-in">Get Started</button></a>
+  </div>
+</section>
 
-  </section>
+<!-- ABOUT -->
+<section class="section" data-aos="fade-up">
+  <h2>About</h2>
+  <p>Professional creative services for modern brands and businesses.</p>
+</section>
 
-  <section class="section" data-aos="fade-up">
-    <h2>About</h2>
-    <p>Professional designer creating modern digital experiences.</p>
-  </section>
+<!-- SERVICES -->
+<section class="section" data-aos="fade-up">
+  <h2>Services</h2>
 
-  <section class="section" data-aos="fade-up">
-    <h2>Services</h2>
+  <div class="grid">
 
-    <div class="grid">
-
-      <div class="card">
-        <h3>Web Design</h3>
-      </div>
-
-      <div class="card">
-        <h3>Logo Design</h3>
-      </div>
-
-      <div class="card">
-        <h3>Video Editing</h3>
-      </div>
-
+    <div class="card">
+      <h3>Web Design</h3>
     </div>
-  </section>
 
-  <section class="section contact" data-aos="fade-up">
+    <div class="card">
+      <h3>Logo Design</h3>
+    </div>
 
-    <h2>Contact</h2>
+    <div class="card">
+      <h3>Video Editing</h3>
+    </div>
 
-    <form id="contactForm">
+    <div class="card">
+      <h3>QR Code Design</h3>
+    </div>
 
-      <select id="method">
-        <option value="">Contact Method</option>
-        <option value="WhatsApp">WhatsApp</option>
-        <option value="Email">Email</option>
-      </select>
+  </div>
+</section>
 
-      <select id="service">
-        <option value="">Service</option>
-        <option value="Web Design">Web Design</option>
-        <option value="Logo Design">Logo Design</option>
-        <option value="Video Editing">Video Editing</option>
-      </select>
+<!-- CONTACT -->
+<section class="section contact" id="contact" data-aos="fade-up">
 
-      <textarea id="message" placeholder="Your message"></textarea>
+  <h2>Contact</h2>
 
-      <button type="submit">Send</button>
+  <form id="contactForm">
 
-    </form>
+    <input type="text" id="clientName" placeholder="Your Name" required>
 
-  </section>
+    <select id="method" required>
+      <option value="">Contact Method</option>
+      <option value="WhatsApp">WhatsApp</option>
+      <option value="Email">Email</option>
+    </select>
 
-  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-  <script src="script.js"></script>
+    <select id="service" required>
+      <option value="">Service</option>
+      <option value="Web Design">Web Design</option>
+      <option value="Logo Design">Logo Design</option>
+      <option value="Video Editing">Video Editing</option>
+      <option value="QR Design">QR Design</option>
+    </select>
+
+    <textarea id="message" placeholder="Describe your request..." required></textarea>
+
+    <button type="submit">Send Request</button>
+
+  </form>
+
+</section>
+
+<footer>
+  <p>© 2026 Creative Studio</p>
+</footer>
+
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script src="script.js"></script>
 
 </body>
 </html>
