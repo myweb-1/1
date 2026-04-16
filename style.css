@@ -5,62 +5,116 @@
 }
 
 body {
-  font-family: Arial;
-  background: #0b1220;
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #0b1220, #020617);
   color: white;
 }
 
+/* LANGUAGE */
+.lang-switch {
+  position: fixed;
+  top: 15px;
+  right: 15px;
+  display: flex;
+  gap: 10px;
+  z-index: 999;
+}
+
+.lang-switch button {
+  padding: 8px 12px;
+  border: none;
+  border-radius: 8px;
+  background: rgba(255,255,255,0.1);
+  color: white;
+  cursor: pointer;
+}
+
+/* HERO */
 .hero {
   height: 100vh;
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
   text-align: center;
+  background: radial-gradient(circle, #1e293b, #0b1220);
 }
 
 .hero h1 {
-  font-size: 40px;
+  font-size: 55px;
 }
 
+.hero p {
+  margin-top: 10px;
+  opacity: 0.8;
+}
+
+/* BUTTON */
+button {
+  margin-top: 20px;
+  padding: 12px 25px;
+  border: none;
+  border-radius: 10px;
+  background: linear-gradient(135deg, #22c55e, #16a34a);
+  color: white;
+  cursor: pointer;
+}
+
+/* SECTIONS */
 .section {
   padding: 80px 20px;
   text-align: center;
 }
 
+h2 {
+  font-size: 34px;
+  margin-bottom: 20px;
+}
+
+/* GRID */
 .grid {
   display: flex;
-  gap: 20px;
   justify-content: center;
   flex-wrap: wrap;
-  margin-top: 30px;
+  gap: 20px;
 }
 
 .card {
-  background: rgba(255,255,255,0.08);
-  padding: 20px;
-  width: 200px;
-  border-radius: 10px;
+  background: rgba(255,255,255,0.06);
+  padding: 25px;
+  width: 220px;
+  border-radius: 15px;
+  border: 1px solid rgba(255,255,255,0.1);
+  transition: 0.3s;
 }
 
-.contact form {
+.card:hover {
+  transform: translateY(-10px);
+}
+
+/* FORM */
+form {
   display: flex;
   flex-direction: column;
-  gap: 15px;
+  gap: 12px;
   max-width: 400px;
   margin: auto;
 }
 
-select, textarea {
-  padding: 10px;
+input, select, textarea {
+  padding: 12px;
   border-radius: 8px;
   border: none;
+  background: rgba(255,255,255,0.08);
+  color: white;
 }
 
-button {
-  padding: 12px;
-  background: #22c55e;
-  border: none;
-  color: white;
-  cursor: pointer;
+textarea {
+  min-height: 120px;
+}
+
+/* FOOTER */
+footer {
+  text-align: center;
+  padding: 20px;
+  opacity: 0.6;
 }
