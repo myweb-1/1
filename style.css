@@ -1,144 +1,66 @@
-
-/* RESET */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* BODY */
 body {
-  font-family: 'Poppins', sans-serif;
+  font-family: Arial;
   background: #0b1220;
-  color: #fff;
-  line-height: 1.6;
+  color: white;
 }
 
-/* HERO */
 .hero {
   height: 100vh;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   text-align: center;
-
-  background: radial-gradient(circle at top, #1e293b, #0b1220 70%);
-  padding: 20px;
 }
 
-.hero-content h1 {
-  font-size: 48px;
-  font-weight: 700;
+.hero h1 {
+  font-size: 40px;
 }
 
-.hero-content p {
-  margin-top: 15px;
-  font-size: 18px;
-  opacity: 0.8;
-  max-width: 600px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-/* BUTTON */
-button {
-  margin-top: 25px;
-  padding: 14px 30px;
-  border: none;
-  border-radius: 12px;
-  background: linear-gradient(135deg, #22c55e, #16a34a);
-  color: white;
-  font-size: 16px;
-  cursor: pointer;
-  transition: 0.3s ease;
-}
-
-button:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 10px 20px rgba(0,0,0,0.3);
-}
-
-/* SECTIONS */
 .section {
-  padding: 100px 20px;
+  padding: 80px 20px;
   text-align: center;
 }
 
-.section h2 {
-  font-size: 36px;
-  margin-bottom: 20px;
-}
-
-/* GRID SERVICES */
 .grid {
   display: flex;
-  justify-content: center;
   gap: 20px;
+  justify-content: center;
   flex-wrap: wrap;
-  margin-top: 40px;
-}
-
-/* CARDS */
-.card {
-  background: rgba(255,255,255,0.05);
-  padding: 25px;
-  width: 280px;
-  border-radius: 15px;
-  backdrop-filter: blur(10px);
-  transition: 0.3s ease;
-  border: 1px solid rgba(255,255,255,0.1);
-}
-
-.card:hover {
-  transform: translateY(-10px);
-  background: rgba(255,255,255,0.1);
-}
-
-.card h3 {
-  margin-bottom: 10px;
-}
-
-/* CONTACT FORM */
-.contact form {
   margin-top: 30px;
+}
+
+.card {
+  background: rgba(255,255,255,0.08);
+  padding: 20px;
+  width: 200px;
+  border-radius: 10px;
+}
+
+.contact form {
   display: flex;
   flex-direction: column;
   gap: 15px;
-  max-width: 500px;
-  margin-left: auto;
-  margin-right: auto;
+  max-width: 400px;
+  margin: auto;
 }
 
 select, textarea {
-  padding: 14px;
-  border-radius: 10px;
+  padding: 10px;
+  border-radius: 8px;
   border: none;
-  outline: none;
-  background: rgba(255,255,255,0.08);
+}
+
+button {
+  padding: 12px;
+  background: #22c55e;
+  border: none;
   color: white;
-}
-
-textarea {
-  min-height: 130px;
-  resize: none;
-}
-
-/* FOOTER */
-footer {
-  text-align: center;
-  padding: 30px;
-  background: #050a14;
-  font-size: 14px;
-  opacity: 0.7;
-}
-
-/* RESPONSIVE */
-@media (max-width: 768px) {
-  .hero-content h1 {
-    font-size: 32px;
-  }
-
-  .card {
-    width: 100%;
-  }
+  cursor: pointer;
 }
