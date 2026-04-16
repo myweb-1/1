@@ -1,0 +1,32 @@
+body {
+  margin: 0;
+  font-family: Arial;
+  color: white;
+  text-align: center;
+
+  background: linear-gradient(-45deg, #0f172a, #020617, #1e293b);
+  background-size: 400% 400%;
+  animation: bg 10s infinite;
+}
+
+@keyframes bg {
+  0% { background-position: 0% }
+  50% { background-position: 100% }
+  100% { background-position: 0% }
+}
+
+.hero {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+button {
+  padding: 10px 20px;
+  background: #22c55e;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
