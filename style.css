@@ -57,7 +57,46 @@ button {
   cursor: pointer;
   transition: 0.3s ease;
 }
+form {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+}
 
+label {
+  text-align: left;
+  font-size: 14px;
+  opacity: 0.8;
+}
+
+select, textarea {
+  padding: 12px;
+  border-radius: 8px;
+  border: none;
+  outline: none;
+}
+
+textarea {
+  min-height: 120px;
+  resize: none;
+}
+
+form button {
+  background: #22c55e;
+  border: none;
+  padding: 12px;
+  color: white;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+form button:hover {
+  background: #16a34a;
+}
 button:hover {
   background: #16a34a;
   transform: scale(1.05);
