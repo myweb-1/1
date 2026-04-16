@@ -25,12 +25,24 @@
     <p data-aos="fade-up" data-aos-delay="200">
       Web Design - Logo Design - Video Editing
     </p>
+<section class="contact" data-aos="fade-up">
 
-    <a href="https://wa.me/201080403165" target="_blank">
-      <button data-aos="zoom-in" data-aos-delay="400">
-        Contact on WhatsApp
-      </button>
+  <h2>Contact Me</h2>
+  <p>Feel free to reach out for any project or collaboration</p>
+
+  <div class="contact-box">
+
+    <a href="https://wa.me/201080403165" target="_blank" class="contact-item">
+      💬 WhatsApp
     </a>
+
+    <a href="mailto:example@gmail.com" class="contact-item">
+      📧 Email
+    </a>
+
+   
+
+  
   </section>
 
   <!-- ABOUT -->
@@ -72,17 +84,38 @@
   </section>
 
   <!-- CONTACT -->
-  <section class="contact" data-aos="fade-up">
-    <h2>Contact Me</h2>
+ <section class="contact" data-aos="fade-up">
 
-    <a href="https://wa.me/201080403165">
-      <button>WhatsApp</button>
-    </a>
-  </section>
+  <h2>Contact Me</h2>
+  <p>Send your request and I will reply soon</p>
 
-  <!-- SCRIPTS -->
-  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-  <script src="script.js"></script>
+  <form id="contactForm">
 
-</body>
-</html>
+    <!-- اختيار طريقة التواصل -->
+    <label>Preferred Contact Method</label>
+    <select id="method" required>
+      <option value="">Choose</option>
+      <option value="WhatsApp">WhatsApp</option>
+      <option value="Email">Email</option>
+    </select>
+
+    <!-- اختيار الخدمة -->
+    <label>Service Type</label>
+    <select id="service" required>
+      <option value="">Choose Service</option>
+      <option value="Video Editing">Video Editing</option>
+      <option value="Logo Design">Logo Design</option>
+      <option value="Web Design">Web Design</option>
+      <option value="Other">Other</option>
+    </select>
+
+    <!-- الرسالة -->
+    <label>Your Request</label>
+    <textarea id="message" placeholder="Write your request..." required></textarea>
+
+    <!-- زر الإرسال -->
+    <button type="submit">Send Request</button>
+
+  </form>
+
+</section>
