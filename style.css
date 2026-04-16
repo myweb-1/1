@@ -5,12 +5,12 @@
 }
 
 body {
-  font-family: 'Poppins', sans-serif;
-  background: linear-gradient(135deg, #0b1220, #020617);
+  font-family: Arial;
+  background: linear-gradient(135deg, #050816, #0b1220);
   color: white;
 }
 
-/* LANGUAGE */
+/* LANGUAGE BUTTON */
 .lang-switch {
   position: fixed;
   top: 15px;
@@ -24,9 +24,9 @@ body {
   padding: 8px 12px;
   border: none;
   border-radius: 8px;
+  cursor: pointer;
   background: rgba(255,255,255,0.1);
   color: white;
-  cursor: pointer;
 }
 
 /* HERO */
@@ -36,38 +36,29 @@ body {
   justify-content: center;
   align-items: center;
   text-align: center;
-  background: radial-gradient(circle, #1e293b, #0b1220);
 }
 
 .hero h1 {
-  font-size: 55px;
+  font-size: 60px;
+  font-weight: bold;
 }
 
 .hero p {
   margin-top: 10px;
   opacity: 0.8;
-}
-
-/* BUTTON */
-button {
-  margin-top: 20px;
-  padding: 12px 25px;
-  border: none;
-  border-radius: 10px;
-  background: linear-gradient(135deg, #22c55e, #16a34a);
-  color: white;
-  cursor: pointer;
+  font-size: 18px;
 }
 
 /* SECTIONS */
 .section {
-  padding: 80px 20px;
+  padding: 90px 20px;
   text-align: center;
 }
 
 h2 {
-  font-size: 34px;
+  font-size: 40px;
   margin-bottom: 20px;
+  color: #22c55e;
 }
 
 /* GRID */
@@ -83,12 +74,12 @@ h2 {
   padding: 25px;
   width: 220px;
   border-radius: 15px;
-  border: 1px solid rgba(255,255,255,0.1);
   transition: 0.3s;
 }
 
 .card:hover {
   transform: translateY(-10px);
+  background: rgba(255,255,255,0.12);
 }
 
 /* FORM */
@@ -96,7 +87,7 @@ form {
   display: flex;
   flex-direction: column;
   gap: 12px;
-  max-width: 400px;
+  max-width: 420px;
   margin: auto;
 }
 
@@ -108,13 +99,16 @@ input, select, textarea {
   color: white;
 }
 
-textarea {
-  min-height: 120px;
+button {
+  padding: 12px;
+  background: #22c55e;
+  border: none;
+  border-radius: 8px;
+  color: white;
+  cursor: pointer;
 }
 
-/* FOOTER */
-footer {
-  text-align: center;
-  padding: 20px;
-  opacity: 0.6;
+/* TEXT */
+p {
+  opacity: 0.8;
 }
