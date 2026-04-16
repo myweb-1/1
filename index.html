@@ -4,118 +4,120 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Ashraf Design Studio</title>
+  <title>Ashraf Creative Studio</title>
 
-  <meta name="description" content="Professional web design, logo design and video editing services">
-  <meta name="keywords" content="web design, graphic design, logo design, video editing">
+  <meta name="description" content="Professional Design Studio - Web Design, Video Editing, Logo Design">
+  <meta name="keywords" content="web design, logo design, video editing, graphic design">
 
   <!-- CSS -->
   <link rel="stylesheet" href="style.css">
 
   <!-- AOS Animation -->
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 </head>
 
 <body>
 
   <!-- HERO SECTION -->
   <section class="hero">
-    <h1 data-aos="fade-up">Ashraf Design Studio</h1>
 
-    <p data-aos="fade-up" data-aos-delay="200">
-      Web Design - Logo Design - Video Editing
-    </p>
-<section class="contact" data-aos="fade-up">
+    <div class="hero-content">
 
-  <h2>Contact Me</h2>
-  <p>Feel free to reach out for any project or collaboration</p>
+      <h1 data-aos="fade-up">Ashraf Creative Studio</h1>
 
-  <div class="contact-box">
+      <p data-aos="fade-up" data-aos-delay="200">
+        We build modern websites, creative logos & high-quality videos
+      </p>
 
-    <a href="https://wa.me/201080403165" target="_blank" class="contact-item">
-      💬 WhatsApp
-    </a>
+      <a href="#contact">
+        <button data-aos="zoom-in" data-aos-delay="400">Get Started</button>
+      </a>
 
-    <a href="mailto:example@gmail.com" class="contact-item">
-      📧 Email
-    </a>
+    </div>
 
-   
-
-  
   </section>
 
   <!-- ABOUT -->
-  <section class="about" data-aos="fade-up">
+  <section class="section" data-aos="fade-up">
     <h2>About Me</h2>
     <p>
-      I am a professional graphic designer specialized in web design, logo creation, and video editing.
+      I am a creative designer specializing in web design, branding, and video editing with modern and clean style.
     </p>
   </section>
 
   <!-- SERVICES -->
-  <section class="services" data-aos="fade-up">
+  <section class="section" data-aos="fade-up">
+
     <h2>Services</h2>
 
-    <div class="cards">
+    <div class="grid">
 
       <div class="card">
         <h3>Web Design</h3>
-        <p>Modern and responsive websites</p>
+        <p>Modern responsive websites with clean UI/UX</p>
       </div>
 
       <div class="card">
         <h3>Logo Design</h3>
-        <p>Creative and unique brand identity</p>
+        <p>Unique branding identity for your business</p>
       </div>
 
       <div class="card">
         <h3>Video Editing</h3>
-        <p>Professional promotional videos</p>
+        <p>Professional marketing & social media videos</p>
       </div>
 
     </div>
+
   </section>
 
   <!-- PORTFOLIO -->
-  <section class="portfolio" data-aos="fade-up">
+  <section class="section" data-aos="fade-up">
     <h2>My Work</h2>
-    <p>Showcase of my previous projects</p>
+    <p>Showcase of creative projects and past work</p>
   </section>
 
-  <!-- CONTACT -->
- <section class="contact" data-aos="fade-up">
+  <!-- CONTACT FORM -->
+  <section class="section contact" id="contact" data-aos="fade-up">
 
-  <h2>Contact Me</h2>
-  <p>Send your request and I will reply soon</p>
+    <h2>Contact Me</h2>
+    <p>Send your request and I will reply quickly</p>
 
-  <form id="contactForm">
+    <form id="contactForm">
 
-    <!-- اختيار طريقة التواصل -->
-    <label>Preferred Contact Method</label>
-    <select id="method" required>
-      <option value="">Choose</option>
-      <option value="WhatsApp">WhatsApp</option>
-      <option value="Email">Email</option>
-    </select>
+      <select id="method" required>
+        <option value="">Preferred Contact Method</option>
+        <option value="WhatsApp">WhatsApp</option>
+        <option value="Email">Email</option>
+      </select>
 
-    <!-- اختيار الخدمة -->
-    <label>Service Type</label>
-    <select id="service" required>
-      <option value="">Choose Service</option>
-      <option value="Video Editing">Video Editing</option>
-      <option value="Logo Design">Logo Design</option>
-      <option value="Web Design">Web Design</option>
-      <option value="Other">Other</option>
-    </select>
+      <select id="service" required>
+        <option value="">Select Service</option>
+        <option value="Web Design">Web Design</option>
+        <option value="Logo Design">Logo Design</option>
+        <option value="Video Editing">Video Editing</option>
+        <option value="Other">Other</option>
+      </select>
 
-    <!-- الرسالة -->
-    <label>Your Request</label>
-    <textarea id="message" placeholder="Write your request..." required></textarea>
+      <textarea id="message" placeholder="Describe your project..." required></textarea>
 
-    <!-- زر الإرسال -->
-    <button type="submit">Send Request</button>
+      <button type="submit">Send Message</button>
 
-  </form>
+    </form>
 
-</section>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>© 2026 Ashraf Creative Studio - All Rights Reserved</p>
+  </footer>
+
+  <!-- SCRIPTS -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="script.js"></script>
+
+</body>
+</html>
