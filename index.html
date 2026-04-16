@@ -7,13 +7,11 @@
   <title>Creative Studio</title>
 
   <link rel="stylesheet" href="style.css">
-  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 </head>
 
 <body>
 
-<!-- LANGUAGE SWITCH -->
+<!-- LANGUAGE BUTTON -->
 <div class="lang-switch">
   <button onclick="setLang('en')">EN</button>
   <button onclick="setLang('ar')">AR</button>
@@ -21,62 +19,57 @@
 
 <!-- HERO -->
 <section class="hero">
+
   <div>
-    <h1 id="title" data-aos="fade-up">Creative Studio</h1>
-    <p data-aos="fade-up" data-aos-delay="200">
-      Web Design - Logo Design - Video Editing - QR Design
-    </p>
-    <a href="#contact"><button data-aos="zoom-in">Get Started</button></a>
+    <h1 id="title">Creative Studio</h1>
+    <p id="subtitle">Web Design • Logo Design • Video Editing • QR Design</p>
+
+    <a href="#contact">
+      <button>Get Started</button>
+    </a>
+
   </div>
+
 </section>
 
 <!-- ABOUT -->
-<section class="section" data-aos="fade-up">
-  <h2>About</h2>
-  <p>Professional creative services for modern brands and businesses.</p>
+<section class="section">
+  <h2 id="aboutTitle">About</h2>
+  <p id="aboutText">We create modern, clean and powerful digital experiences.</p>
 </section>
 
 <!-- SERVICES -->
-<section class="section" data-aos="fade-up">
-  <h2>Services</h2>
+<section class="section">
+
+  <h2 id="servicesTitle">Services</h2>
 
   <div class="grid">
 
-    <div class="card">
-      <h3>Web Design</h3>
-    </div>
-
-    <div class="card">
-      <h3>Logo Design</h3>
-    </div>
-
-    <div class="card">
-      <h3>Video Editing</h3>
-    </div>
-
-    <div class="card">
-      <h3>QR Code Design</h3>
-    </div>
+    <div class="card"><h3>Web Design</h3></div>
+    <div class="card"><h3>Logo Design</h3></div>
+    <div class="card"><h3>Video Editing</h3></div>
+    <div class="card"><h3>QR Design</h3></div>
 
   </div>
+
 </section>
 
 <!-- CONTACT -->
-<section class="section contact" id="contact" data-aos="fade-up">
+<section class="section contact" id="contact">
 
-  <h2>Contact</h2>
+  <h2 id="contactTitle">Contact</h2>
 
   <form id="contactForm">
 
     <input type="text" id="clientName" placeholder="Your Name" required>
 
-    <select id="method" required>
+    <select id="method">
       <option value="">Contact Method</option>
       <option value="WhatsApp">WhatsApp</option>
       <option value="Email">Email</option>
     </select>
 
-    <select id="service" required>
+    <select id="service">
       <option value="">Service</option>
       <option value="Web Design">Web Design</option>
       <option value="Logo Design">Logo Design</option>
@@ -84,19 +77,14 @@
       <option value="QR Design">QR Design</option>
     </select>
 
-    <textarea id="message" placeholder="Describe your request..." required></textarea>
+    <textarea id="message" placeholder="Your Message"></textarea>
 
-    <button type="submit">Send Request</button>
+    <button type="submit">Send</button>
 
   </form>
 
 </section>
 
-<footer>
-  <p>© 2026 Creative Studio</p>
-</footer>
-
-<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 <script src="script.js"></script>
 
 </body>
