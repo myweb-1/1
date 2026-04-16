@@ -18,7 +18,43 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     }
   });
 });
+document.getElementById("contactForm").addEventListener("submit", function(e) {
+  e.preventDefault();
 
+  const method = document.getElementById("method").value;
+  const service = document.getElementById("service").value;
+  const message = document.getElementById("message").value;
+
+  const email = "ghfjvgh139@gmail.com";
+
+  const subject = "New Client Request - " + service;
+
+  const body =
+`Contact Method: ${method}
+Service: ${service}
+
+Message:
+${message}`;
+
+  if (method === "Email") {
+    // فتح الإيميل مباشرة
+    window.location.href =
+      `mailto:${email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+  }
+
+  else if (method === "WhatsApp") {
+    const whatsappNumber = "201080403165";
+
+    const waMessage =
+`Service: ${service}
+Message: ${message}`;
+
+    window.open(
+      `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(waMessage)}`,
+      "_blank"
+    );
+  }
+});
 // Simple button click effect (optional animation)
 const buttons = document.querySelectorAll("button");
 
