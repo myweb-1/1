@@ -1,9 +1,3 @@
-AOS.init({
-  duration: 1000,
-  once: true
-});
-
-/* FORM */
 document.getElementById("contactForm").addEventListener("submit", function(e) {
   e.preventDefault();
 
@@ -12,8 +6,8 @@ document.getElementById("contactForm").addEventListener("submit", function(e) {
   const service = document.getElementById("service").value;
   const message = document.getElementById("message").value;
 
-  const email = "ghfjvgh139@gmail.com";
   const whatsapp = "201080403165";
+  const email = "ghfjvgh139@gmail.com";
 
   const text =
 `Name: ${name}
@@ -34,15 +28,19 @@ Message: ${message}`;
 
 /* LANGUAGE SWITCH */
 function setLang(lang) {
-  const title = document.getElementById("title");
+
+  const title = document.querySelector("h1");
+  const subtitle = document.querySelector("p");
 
   if (lang === "ar") {
     document.body.dir = "rtl";
     title.innerText = "ستوديو الإبداع";
+    subtitle.innerText = "تصميم مواقع • لوجو • مونتاج • QR";
   }
 
   if (lang === "en") {
     document.body.dir = "ltr";
     title.innerText = "Creative Studio";
+    subtitle.innerText = "Web Design • Logo • Video Editing • QR Design";
   }
 }
