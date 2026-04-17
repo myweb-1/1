@@ -21,8 +21,6 @@ i = (i + 1) % texts.length;
 setInterval(changeText, 2500);
 
 // WhatsApp
-document.addEventListener("DOMContentLoaded", function(){
-
 document.getElementById("orderForm").addEventListener("submit", function(e){
 e.preventDefault();
 
@@ -38,8 +36,7 @@ Details: ${desc}`;
 
 let phone = "201080403165";
 
-window.open("https://wa.me/" + phone + "?text=" + encodeURIComponent(msg), "_blank");
+let url = "https://wa.me/" + phone + "?text=" + encodeURIComponent(msg);
 
-});
-
+window.open(url, "_blank");
 });
