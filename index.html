@@ -43,28 +43,19 @@ I am a freelance designer specialized in web design, logo design, video editing,
 <section>
 <h2>Order Service</h2>
 
-<form>
+<form id="orderForm">
 
-<input type="text" placeholder="Your Name">
+<input type="text" id="name" placeholder="Your Name" required>
 
 <select id="service">
-<option>Choose Service</option>
+<option value="">Choose Service</option>
 <option>Web Design</option>
 <option>Logo Design</option>
 <option>Video Editing</option>
 <option>QR Design</option>
 </select>
 
-<select id="contactMethod" onchange="toggleContact()">
-<option value="email">Contact via Email</option>
-<option value="whatsapp">Contact via WhatsApp</option>
-</select>
-
-<input id="emailField" type="email" placeholder="Your Email (for delivery)">
-
-<input id="whatsappField" type="text" placeholder="Your WhatsApp Number" style="display:none;">
-
-<textarea placeholder="Project Description"></textarea>
+<textarea id="desc" placeholder="Project Description" required></textarea>
 
 <button type="submit">Send Request</button>
 
