@@ -156,17 +156,7 @@ font-size:26px !important;
 }
 
 }
-.dark-btn{
-position:absolute;
-right:20px;
-top:15px;
-padding:8px 12px;
-border:none;
-border-radius:8px;
-cursor:pointer;
-background:#2563eb;
-color:white;
-}
+
   .stats{
 display:grid;
 grid-template-columns:repeat(3,1fr);
