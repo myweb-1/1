@@ -40,3 +40,6 @@ let url = "https://wa.me/" + phone + "?text=" + encodeURIComponent(msg);
 
 window.open(url, "_blank");
 });
+function toggleDark(){
+document.body.classList.toggle("dark");
+}
