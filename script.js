@@ -44,3 +44,7 @@ function setLang(lang) {
     subtitle.innerText = "Web Design • Logo • Video Editing • QR Design";
   }
 }
+AOS.init({
+  duration: 1000,
+  once: true
+});
