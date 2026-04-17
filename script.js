@@ -19,7 +19,34 @@ i = (i + 1) % texts.length;
 }
 
 setInterval(changeText, 2500);
+const counters = document.querySelectorAll(".counter");
 
+const speed = 80;
+
+const startCounting = () => {
+counters.forEach(counter => {
+
+const updateCount = () => {
+const target = +counter.getAttribute("data-target");
+const count = +counter.innerText;
+
+const increment = Math.ceil(target / speed);
+
+if(count < target){
+counter.innerText = count + increment;
+setTimeout(updateCount, 30);
+} else {
+counter.innerText = target + "+";
+}
+};
+
+updateCount();
+
+});
+};
+
+// تشغيل عند ظهور الصفحة
+window.addEventListener("load", startCounting);
 // WhatsApp
 document.getElementById("orderForm").addEventListener("submit", function(e){
 e.preventDefault();
