@@ -19,19 +19,34 @@
 </div>
 
 <!-- HERO -->
-<section class="hero">
+<section class="slider">
 
-  <div class="hero-content">
-    <h1 id="title">Creative Studio</h1>
+  <div class="slides">
 
-    <p id="subtitle">
-      Web Design • Logo • Video Editing • QR Design
-    </p>
+    <!-- Slide 1 -->
+    <div class="slide active">
+      <h1>Creative Studio</h1>
+      <p>Web Design • Logo • Video Editing • QR Design</p>
+      <button onclick="scrollToContact()">Get Started</button>
+    </div>
 
-    <a href="#contact">
-      <button>Get Started</button>
-    </a>
+    <!-- Slide 2 -->
+    <div class="slide">
+      <h1>Modern Websites</h1>
+      <p>Fast • Responsive • Professional</p>
+    </div>
+
+    <!-- Slide 3 -->
+    <div class="slide">
+      <h1>Creative Designs</h1>
+      <p>Logos • Branding • Visual Identity</p>
+    </div>
+
   </div>
+
+  <!-- Buttons -->
+  <button class="prev" onclick="prevSlide()">❮</button>
+  <button class="next" onclick="nextSlide()">❯</button>
 
 </section>
 
