@@ -1,56 +1,77 @@
 <!DOCTYPE html>
-<html lang="ar" dir="rtl">
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>A5hraf | تصميم داخلي احترافي</title>
-    <meta name="description" content="A5hraf - تصميم داخلي احترافي للمنازل والمكاتب 01080403165">
-    <meta name="keywords" content="A5hraf, تصميم داخلي, ديكور, مصر, ديكور منازل">
-    <meta name="author" content="A5hraf">
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700&display=swap" rel="stylesheet">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>A5hraf Portfolio</title>
+<link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-    <header class="header">
-        <div class="nav-container">
-            <div class="logo">
-                <span>A</span>5<span>h</span>raf
-            </div>
-            <nav>
-                <ul class="nav-menu">
-                    <li><a href="#home">الرئيسية</a></li>
-                    <li><a href="#services">الخدمات</a></li>
-                    <li><a href="#contact">تواصل معنا</a></li>
-                </ul>
-                <div class="menu-toggle">
-                    <i class="fas fa-bars"></i>
-                </div>
-            </nav>
-        </div>
-    </header>
 
-    <section id="home" class="hero">
-        <div class="hero-content">
-            <h1 class="hero-title">تصميم داخلي <br><span>احترافي</span></h1>
-            <p>نحول أحلامك إلى واقع ملموس بأحدث التصاميم</p>
-            <a href="#contact" class="cta-button pulse">
-                <i class="fas fa-arrow-left"></i> ابدأ مشروعك الآن
-            </a>
-        </div>
-    </section>
+<header>
+<div class="logo">A5hraf</div>
+<button onclick="toggleLang()">AR / EN</button>
+</header>
 
-    <section id="services" class="services">
-        <div class="container">
-            <h2 class="section-title">خدمات <span>A5hraf</span></h2>
-            <div class="services-grid">
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-home"></i>
-                    </div>
-                    <h3>تصميم المنازل</h3>
-                    <p>تصاميم عصرية ومريحة تناسب جميع الأذواق والميزانيات</p>
-                </div>
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class
+<section>
+<h2 id="aboutTitle">About Me</h2>
+<p id="aboutText">
+I am a freelance designer specialized in web design, logo design, video editing, QR design.
+</p>
+</section>
+
+<section>
+<h2 id="servicesTitle">Services</h2>
+
+<div class="card">Web Design</div>
+<div class="card">Logo Design</div>
+<div class="card">Video Editing</div>
+<div class="card">QR Code Design</div>
+</section>
+
+<section>
+<h2>Tools I Use</h2>
+
+<div class="card">Canva Pro</div>
+<div class="card">CapCut Pro</div>
+<div class="card">VN Editor</div>
+<div class="card">GitHub</div>
+<div class="card">Blackbox AI</div>
+</section>
+
+<section>
+<h2>Order Service</h2>
+
+<form>
+
+<input type="text" placeholder="Your Name">
+
+<select id="service">
+<option>Choose Service</option>
+<option>Web Design</option>
+<option>Logo Design</option>
+<option>Video Editing</option>
+<option>QR Design</option>
+</select>
+
+<select id="contactMethod" onchange="toggleContact()">
+<option value="email">Contact via Email</option>
+<option value="whatsapp">Contact via WhatsApp</option>
+</select>
+
+<input id="emailField" type="email" placeholder="Your Email (for delivery)">
+
+<input id="whatsappField" type="text" placeholder="Your WhatsApp Number" style="display:none;">
+
+<textarea placeholder="Project Description"></textarea>
+
+<button type="submit">Send Request</button>
+
+</form>
+</section>
+
+<script src="script.js"></script>
+
+</body>
+</html>
