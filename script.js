@@ -18,7 +18,7 @@ lang = "en";
 }
 }
 
-// إظهار / إخفاء وسيلة التواصل
+// إظهار/إخفاء وسيلة التواصل
 function toggleContact(){
 let method = document.getElementById("contactMethod").value;
 
@@ -31,3 +31,31 @@ document.getElementById("emailField").style.display = "none";
 document.getElementById("whatsappField").style.display = "block";
 }
 }
+
+// إرسال واتساب
+document.querySelector("form").addEventListener("submit", function(e){
+e.preventDefault();
+
+let name = document.querySelector("input[type='text']").value;
+let service = document.getElementById("service").value;
+let method = document.getElementById("contactMethod").value;
+let email = document.getElementById("emailField").value;
+let whatsapp = document.getElementById("whatsappField").value;
+let desc = document.querySelector("textarea").value;
+
+let contactInfo = method === "email" ? email : whatsapp;
+
+let message =
+`📌 New Order from Website:
+👤 Name: ${name}
+🛠 Service: ${service}
+📞 Contact: ${contactInfo}
+💬 Method: ${method}
+📝 Description: ${desc}`;
+
+let phone = "201080403165"; // رقمك واتساب
+
+let url = "https://wa.me/" + phone + "?text=" + encodeURIComponent(message);
+
+window.open(url, "_blank");
+});
