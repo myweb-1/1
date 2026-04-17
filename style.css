@@ -6,73 +6,63 @@ font-family:Arial;
 }
 
 body{
-background:#0a0a0a;
+background:#050505;
 color:white;
 text-align:center;
+overflow-x:hidden;
 }
 
-/* background */
+/* background glow */
 .bg{
 position:fixed;
 width:100%;
 height:100%;
-background:linear-gradient(45deg,#00ffd5,#6a00ff,#ff00c8);
-background-size:400% 400%;
-animation:move 12s infinite alternate;
-filter:blur(90px);
-opacity:0.3;
+background:radial-gradient(circle,#00ffd5,#6a00ff,#000);
+filter:blur(100px);
+opacity:0.25;
 z-index:-1;
-}
-
-@keyframes move{
-0%{background-position:0% 50%}
-100%{background-position:100% 50%}
 }
 
 /* header */
 header{
 padding:20px;
+backdrop-filter:blur(10px);
 background:rgba(255,255,255,0.05);
-backdrop-filter:blur(12px);
 position:sticky;
 top:0;
 }
 
 .logo{
 color:#00ffd5;
+font-weight:bold;
 font-size:22px;
-font-weight:bold;
 }
 
-/* HERO */
+/* hero */
 .hero{
-padding:80px 20px;
+padding:100px 20px;
 }
 
-.hero h1{
-font-size:50px;
+.logo-text{
+font-size:55px;
 color:#00ffd5;
+letter-spacing:2px;
 }
 
-button{
-padding:12px 20px;
-margin-top:20px;
-border:none;
-border-radius:10px;
-background:#00ffd5;
-cursor:pointer;
-font-weight:bold;
+.hero p{
+opacity:0.7;
+margin-top:10px;
 }
 
 /* sections */
-.section{
+.card-section{
 max-width:900px;
-margin:50px auto;   /* 👈 مسافة بين الأقسام */
+margin:60px auto;
 padding:30px;
 background:rgba(255,255,255,0.05);
+border:1px solid rgba(255,255,255,0.1);
 border-radius:20px;
 backdrop-filter:blur(15px);
-border:1px solid rgba(255,255,255,0.1);
 }
 
 /* grid */
@@ -85,15 +75,15 @@ margin-top:20px;
 
 /* cards */
 .card{
-padding:15px;
+padding:18px;
 background:rgba(255,255,255,0.05);
 border-radius:15px;
 transition:0.3s;
 }
 
 .card:hover{
-transform:scale(1.05);
-background:rgba(0,255,213,0.1);
+transform:translateY(-8px);
+background:rgba(0,255,213,0.15);
 }
 
 /* form */
@@ -106,4 +96,18 @@ border-radius:10px;
 background:rgba(255,255,255,0.05);
 color:white;
 text-align:center;
+}
+
+button{
+padding:12px;
+width:100%;
+border:none;
+border-radius:10px;
+background:#00ffd5;
+cursor:pointer;
+font-weight:bold;
+}
+
+button:hover{
+transform:scale(1.03);
 }
