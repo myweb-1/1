@@ -1,18 +1,45 @@
-body{
+*{
 margin:0;
+padding:0;
+box-sizing:border-box;
 font-family:Arial, sans-serif;
-background:#0f0f0f;
-color:white;
 }
 
+body{
+color:white;
+background:#0a0a0a;
+overflow-x:hidden;
+}
+
+/* animated background */
+.bg{
+position:fixed;
+width:100%;
+height:100%;
+background:linear-gradient(45deg,#00ffd5,#6a00ff,#ff00c8);
+background-size:400% 400%;
+animation:move 12s infinite alternate;
+filter:blur(90px);
+opacity:0.35;
+z-index:-1;
+}
+
+@keyframes move{
+0%{background-position:0% 50%}
+100%{background-position:100% 50%}
+}
+
+/* header */
 header{
 display:flex;
 justify-content:space-between;
 align-items:center;
 padding:15px 30px;
-background:#111;
 position:sticky;
 top:0;
+backdrop-filter:blur(12px);
+background:rgba(255,255,255,0.05);
+border-bottom:1px solid rgba(255,255,255,0.1);
 }
 
 .logo{
@@ -22,45 +49,100 @@ color:#00ffd5;
 }
 
 button{
-padding:8px 12px;
+padding:8px 14px;
 border:none;
+border-radius:10px;
 cursor:pointer;
+background:rgba(255,255,255,0.08);
+color:white;
+transition:0.3s;
+}
+
+button:hover{
+transform:scale(1.05);
 background:#00ffd5;
-font-weight:bold;
+color:black;
 }
 
+/* sections */
 section{
-padding:40px 20px;
-max-width:1000px;
-margin:auto;
+max-width:1100px;
+margin:25px auto;
+padding:25px;
 }
 
-h2{
+.glass{
+background:rgba(255,255,255,0.05);
+backdrop-filter:blur(15px);
+border:1px solid rgba(255,255,255,0.1);
+border-radius:20px;
+box-shadow:0 0 30px rgba(0,255,213,0.1);
+animation:fade 1s ease;
+}
+
+@keyframes fade{
+from{opacity:0;transform:translateY(30px)}
+to{opacity:1;transform:translateY(0)}
+}
+
+/* hero */
+.hero{
+text-align:center;
+padding:60px 20px;
+}
+
+.hero h1{
+font-size:40px;
 color:#00ffd5;
 }
 
-.card{
-background:#1a1a1a;
-padding:15px;
-margin:10px 0;
-border-radius:10px;
+/* grid */
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(150px,1fr));
+gap:12px;
+margin-top:15px;
 }
 
-form input, form textarea, form select{
+/* cards */
+.card, .work-card{
+background:rgba(255,255,255,0.05);
+border:1px solid rgba(255,255,255,0.1);
+padding:15px;
+border-radius:15px;
+text-align:center;
+transition:0.3s;
+}
+
+.card:hover, .work-card:hover{
+transform:translateY(-6px) scale(1.05);
+background:rgba(0,255,213,0.1);
+}
+
+.work-img{
+font-size:40px;
+margin-bottom:10px;
+}
+
+/* form */
+form input,form textarea,form select{
 width:100%;
-padding:10px;
+padding:12px;
 margin:8px 0;
 border:none;
-border-radius:5px;
+border-radius:10px;
+background:rgba(255,255,255,0.05);
+color:white;
 }
 
 form button{
 width:100%;
+margin-top:10px;
 }
 
-@media(max-width:768px){
-header{
-flex-direction:column;
-gap:10px;
-}
+/* footer */
+footer{
+text-align:center;
+padding:20px;
+opacity:0.7;
 }
