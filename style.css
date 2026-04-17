@@ -399,3 +399,27 @@ p {
 .card:hover {
   transform: translateY(-12px) scale(1.05);
 }
+
+/* السكشن كله */
+.section {
+  padding: 80px 20px;
+  text-align: center;
+}
+
+/* الكونتينر */
+.grid {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 25px;
+
+  max-width: 900px;   /* 👈 ده السر */
+  margin: auto;       /* 👈 يخليها في النص */
+}
+
+/* الكروت */
+.card {
+  width: 220px;
+  text-align: center;
+}
