@@ -27,3 +27,25 @@ window.open("https://wa.me/" + phone + "?text=" + encodeURIComponent(message), "
 });
 
 });
+const texts = [
+"Create Digital Experiences",
+"A5hraf Studio",
+"Design. Build. Grow."
+];
+
+let index = 0;
+const el = document.querySelector(".logo-text");
+
+// أول قيمة
+el.innerText = texts[index];
+
+setInterval(() => {
+el.classList.add("fade");
+
+setTimeout(() => {
+index = (index + 1) % texts.length;
+el.innerText = texts[index];
+el.classList.remove("fade");
+}, 400);
+
+}, 2500);
