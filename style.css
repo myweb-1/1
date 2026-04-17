@@ -396,3 +396,6 @@ p {
 .card {
   text-align: center;
 }
+.card:hover {
+  transform: translateY(-12px) scale(1.05);
+}
