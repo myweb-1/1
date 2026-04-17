@@ -14,7 +14,7 @@ body {
 }
 
 .section {
-  padding: 60px 20px;
+  padding: 70px 20px;
   text-align: center;
 }
 
@@ -38,8 +38,4 @@ form {
   gap: 10px;
   max-width: 300px;
   margin: auto;
-}
-
-input, select, textarea, button {
-  padding: 10px;
 }
