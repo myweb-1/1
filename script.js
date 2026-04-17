@@ -1,7 +1,7 @@
 
 document.addEventListener("DOMContentLoaded", function () {
 
-  /* CONTACT FORM */
+  /* ===== CONTACT FORM ===== */
   const form = document.getElementById("contactForm");
 
   if (form) {
@@ -13,7 +13,7 @@ document.addEventListener("DOMContentLoaded", function () {
       const service = document.getElementById("service").value;
       const message = document.getElementById("message").value;
 
-      const whatsapp = "201080403165";
+      const whatsappNumber = "201080403165";
       const email = "ghfjvgh139@gmail.com";
 
       const text =
@@ -21,13 +21,18 @@ document.addEventListener("DOMContentLoaded", function () {
 Service: ${service}
 Message: ${message}`;
 
+      /* WhatsApp */
       if (method === "WhatsApp") {
-        window.open(`https://wa.me/${whatsapp}?text=${encodeURIComponent(text)}`);
+        window.open(
+          `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(text)}`,
+          "_blank"
+        );
       }
 
+      /* Email */
       if (method === "Email") {
         window.location.href =
-        `mailto:${email}?subject=${service}&body=${encodeURIComponent(text)}`;
+          `mailto:${email}?subject=${service}&body=${encodeURIComponent(text)}`;
       }
 
       form.reset();
@@ -36,7 +41,7 @@ Message: ${message}`;
 
 });
 
-/* LANGUAGE SWITCH (EN ONLY - NO ARABIC) */
+/* ===== LANGUAGE (ENGLISH ONLY) ===== */
 function setLang(lang) {
 
   const title = document.getElementById("title");
@@ -48,11 +53,13 @@ function setLang(lang) {
   if (lang === "en") {
     document.body.dir = "ltr";
 
-    title.innerText = "Creative Studio";
-    subtitle.innerText = "Web Design • Logo Design • Video Editing • QR Design";
-
-    aboutTitle.innerText = "About";
-    servicesTitle.innerText = "Services";
-    contactTitle.innerText = "Contact";
+    if (title) title.innerText = "Creative Studio";
+    if (subtitle) subtitle.innerText = "Web Design • Logo Design • Video Editing • QR Design";
+    if (aboutTitle) aboutTitle.innerText = "About";
+    if (servicesTitle) servicesTitle.innerText = "Services";
+    if (contactTitle) contactTitle.innerText = "Contact";
   }
 }
+
+/* ===== SMOOTH SCROLL ===== */
+document.documentElement.style.scrollBehavior = "smooth";
