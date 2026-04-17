@@ -46,5 +46,36 @@ function setLang(lang) {
 }
 AOS.init({
   duration: 1000,
+  
+let index = 0;
+const slides = document.querySelector(".slides");
+const totalSlides = document.querySelectorAll(".slide").length;
+
+/* NEXT */
+function nextSlide() {
+  index = (index + 1) % totalSlides;
+  updateSlide();
+}
+
+/* PREV */
+function prevSlide() {
+  index = (index - 1 + totalSlides) % totalSlides;
+  updateSlide();
+}
+
+/* UPDATE */
+function updateSlide() {
+  slides.style.transform = `translateX(-${index * 100}%)`;
+}
+
+/* AUTO SLIDE */
+setInterval(nextSlide, 4000);
+
+/* SCROLL */
+function scrollToContact() {
+  document.getElementById("contact").scrollIntoView({
+    behavior: "smooth"
+  });
+}
   once: true
 });
