@@ -1,3 +1,10 @@
+function scrollToAbout(){
+document.getElementById("about").scrollIntoView({
+behavior:"smooth"
+});
+}
+
+// WhatsApp
 document.addEventListener("DOMContentLoaded", function(){
 
 document.getElementById("orderForm").addEventListener("submit", function(e){
