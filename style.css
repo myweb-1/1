@@ -379,3 +379,20 @@ p {
 }    
   }
 }
+
+/* تخلي السكشن كله في النص */
+.section {
+  text-align: center;
+}
+
+/* تخلي الكروت في النص */
+.grid {
+  display: flex;
+  justify-content: center;   /* أهم سطر */
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 25px;
+}
+.card {
+  text-align: center;
+}
