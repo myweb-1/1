@@ -16,19 +16,26 @@
 <button onclick="toggleLang()">AR / EN</button>
 </header>
 
-<section class="glass hero">
-<h1>Create Services</h1>
-<p>Professional Design Solutions for Your Business</p>
+<!-- HERO -->
+<section class="slide hero">
+<h1 id="typing"></h1>
+<p>Freelance Designer | Web | Logo | Video Editing | QR</p>
+
+<button class="nextBtn" onclick="nextSlide()">Next Section ↓</button>
 </section>
 
-<section class="glass">
-<h2 id="aboutTitle">About Me</h2>
-<p id="aboutText">
-I am a freelance designer specialized in modern digital design.
+<!-- ABOUT -->
+<section class="slide">
+<h2>About Me</h2>
+<p>
+I am a freelance designer specialized in modern digital design with strong experience in branding and web development.
 </p>
+
+<button class="nextBtn" onclick="nextSlide()">Next Section ↓</button>
 </section>
 
-<section class="glass">
+<!-- WORK -->
+<section class="slide">
 <h2>My Work</h2>
 
 <div class="grid">
@@ -37,21 +44,26 @@ I am a freelance designer specialized in modern digital design.
 <div class="card">Video Editing</div>
 <div class="card">QR Design</div>
 </div>
+
+<button class="nextBtn" onclick="nextSlide()">Next Section ↓</button>
 </section>
 
-<section class="glass">
-<h2>Tools I Use</h2>
+<!-- TOOLS -->
+<section class="slide">
+<h2>Tools</h2>
 
 <div class="grid">
 <div class="card">Canva Pro</div>
 <div class="card">CapCut Pro</div>
 <div class="card">VN Editor</div>
 <div class="card">GitHub</div>
-<div class="card">Blackbox AI</div>
 </div>
+
+<button class="nextBtn" onclick="nextSlide()">Next Section ↓</button>
 </section>
 
-<section class="glass">
+<!-- ORDER -->
+<section class="slide">
 <h2>Order Service</h2>
 
 <form id="orderForm">
@@ -72,10 +84,6 @@ I am a freelance designer specialized in modern digital design.
 
 </form>
 </section>
-
-<footer>
-<p>© 2026 A5hraf - All Rights Reserved</p>
-</footer>
 
 <script src="script.js"></script>
 </body>
