@@ -1,8 +1,7 @@
 
-/* SAFE VERSION - NO CRASH */
-
 document.addEventListener("DOMContentLoaded", function () {
 
+  /* ===== CONTACT FORM ===== */
   const form = document.getElementById("contactForm");
 
   if (form) {
@@ -14,7 +13,7 @@ document.addEventListener("DOMContentLoaded", function () {
       const service = document.getElementById("service")?.value || "";
       const message = document.getElementById("message")?.value || "";
 
-      const whatsapp = "201080403165";
+      const whatsappNumber = "201080403165";
       const email = "ghfjvgh139@gmail.com";
 
       const text =
@@ -22,11 +21,16 @@ document.addEventListener("DOMContentLoaded", function () {
 Service: ${service}
 Message: ${message}`;
 
+      /* WhatsApp */
       if (method === "WhatsApp") {
-        window.open(`https://wa.me/${whatsapp}?text=${encodeURIComponent(text)}`);
+        window.open(
+          `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(text)}`,
+          "_blank"
+        );
       }
 
-      if (method === "Email") {
+      /* Email */
+      else if (method === "Email") {
         window.location.href =
           `mailto:${email}?subject=${service}&body=${encodeURIComponent(text)}`;
       }
@@ -37,18 +41,13 @@ Message: ${message}`;
 
 });
 
-/* SIMPLE LANGUAGE (SAFE) */
-function setLang(lang) {
-  const title = document.getElementById("title");
-  const subtitle = document.getElementById("subtitle");
+/* ===== SMOOTH SCROLL ===== */
+document.documentElement.style.scrollBehavior = "smooth";
 
-  if (lang === "en") {
-    document.body.dir = "ltr";
-
-    if (title) title.innerText = "Creative Studio";
-    if (subtitle) subtitle.innerText = "Web Design • Logo • Video Editing • QR Design";
+/* ===== SIMPLE HERO BUTTON SCROLL ===== */
+function scrollToSection(id) {
+  const section = document.getElementById(id);
+  if (section) {
+    section.scrollIntoView({ behavior: "smooth" });
   }
 }
-
-/* SCROLL */
-document.documentElement.style.scrollBehavior = "smooth";
