@@ -109,3 +109,37 @@ footer{
 margin:40px;
 color:#777;
 }
+@media (max-width: 768px){
+
+/* تقليل حجم الهيرو */
+.hero h1{
+font-size:28px;
+}
+
+/* جعل الأقسام أوسع وأنعم */
+.section{
+margin:40px 15px;
+padding:20px;
+}
+
+/* SERVICES GRID يبقى صفين جنب بعض */
+.grid{
+grid-template-columns:repeat(2, 1fr);
+gap:12px;
+}
+
+/* الكروت أصغر شوية للموبايل */
+.card{
+padding:15px;
+font-size:14px;
+}
+
+/* النصوص أوضح */
+h2{
+font-size:20px;
+}
+
+p{
+font-size:14px;
+}
+}
