@@ -6,102 +6,86 @@ font-family:'Inter', sans-serif;
 }
 
 body{
-background:#f6f7fb;
+background:#f4f6fb;
 color:#111;
+text-align:center;
 }
 
 /* HEADER */
 header{
-padding:20px 50px;
+padding:20px;
 background:white;
-position:sticky;
-top:0;
 border-bottom:1px solid #eee;
 }
 
 .logo{
-font-size:20px;
+font-size:22px;
 font-weight:700;
 }
 
 /* HERO */
 .hero{
-text-align:center;
 padding:120px 20px;
-background:white;
+display:flex;
+flex-direction:column;
+align-items:center;
+gap:15px;
 }
 
 .hero h1{
-font-size:48px;
-margin-bottom:10px;
-}
-
-.hero p{
-color:#666;
-margin-bottom:25px;
-}
-
-.btn{
-display:inline-block;
-padding:12px 25px;
-background:#2563eb;
-color:white;
-border-radius:10px;
-text-decoration:none;
-transition:0.3s;
-}
-
-.btn:hover{
-background:#1e40af;
+font-size:42px;
+transition:0.5s;
 }
 
 /* SECTIONS */
 .section{
-max-width:1000px;
-margin:70px auto;
-padding:20px;
-text-align:center;
-}
-
-.section h2{
-font-size:28px;
-margin-bottom:20px;
+max-width:900px;
+margin:80px auto;   /* spacing between sections */
+padding:30px;
+background:white;
+border-radius:20px;
+border:1px solid #eee;
 }
 
 /* GRID */
 .grid{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
-gap:20px;
+grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+gap:25px;
+margin-top:25px;
 }
 
 /* CARD */
 .card{
-background:white;
+background:#fff;
 padding:25px;
 border-radius:15px;
 border:1px solid #eee;
 transition:0.3s;
+display:flex;
+flex-direction:column;
+align-items:center;
+gap:10px;
+}
+
+.card i{
+font-size:28px;
+color:#2563eb;
 }
 
 .card:hover{
-transform:translateY(-8px);
-box-shadow:0 10px 30px rgba(0,0,0,0.1);
+transform:translateY(-10px);
+box-shadow:0 10px 25px rgba(0,0,0,0.1);
 }
 
 /* FORM */
-form{
-max-width:500px;
-margin:0 auto;
-}
-
 input,select,textarea{
 width:100%;
 padding:14px;
 margin:10px 0;
 border:1px solid #ddd;
 border-radius:10px;
-font-family:'Inter';
+text-align:center;
 }
 
 button{
@@ -112,16 +96,16 @@ color:white;
 border:none;
 border-radius:10px;
 cursor:pointer;
+transition:0.3s;
 }
 
 button:hover{
 background:#1e40af;
+transform:scale(1.03);
 }
 
 /* FOOTER */
 footer{
-text-align:center;
-padding:30px;
+margin:40px;
 color:#777;
-margin-top:50px;
 }
