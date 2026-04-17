@@ -8,7 +8,6 @@ font-family:Arial;
 body{
 background:#0a0a0a;
 color:white;
-overflow-x:hidden;
 text-align:center;
 }
 
@@ -33,38 +32,47 @@ z-index:-1;
 /* header */
 header{
 padding:20px;
-position:sticky;
-top:0;
 background:rgba(255,255,255,0.05);
 backdrop-filter:blur(12px);
-border-bottom:1px solid rgba(255,255,255,0.1);
+position:sticky;
+top:0;
 }
 
 .logo{
-font-size:22px;
 color:#00ffd5;
+font-size:22px;
+font-weight:bold;
+}
+
+/* HERO */
+.hero{
+padding:80px 20px;
+}
+
+.hero h1{
+font-size:50px;
+color:#00ffd5;
+}
+
+button{
+padding:12px 20px;
+margin-top:20px;
+border:none;
+border-radius:10px;
+background:#00ffd5;
+cursor:pointer;
 font-weight:bold;
 }
 
 /* sections */
 .section{
 max-width:900px;
-margin:40px auto;
+margin:50px auto;   /* 👈 مسافة بين الأقسام */
 padding:30px;
 background:rgba(255,255,255,0.05);
-backdrop-filter:blur(15px);
 border-radius:20px;
+backdrop-filter:blur(15px);
 border:1px solid rgba(255,255,255,0.1);
-}
-
-/* hero */
-.hero{
-padding:70px 20px;
-}
-
-.hero h1{
-font-size:50px;
-color:#00ffd5;
 }
 
 /* grid */
@@ -80,7 +88,6 @@ margin-top:20px;
 padding:15px;
 background:rgba(255,255,255,0.05);
 border-radius:15px;
-border:1px solid rgba(255,255,255,0.1);
 transition:0.3s;
 }
 
@@ -99,14 +106,4 @@ border-radius:10px;
 background:rgba(255,255,255,0.05);
 color:white;
 text-align:center;
-}
-
-button{
-padding:12px;
-width:100%;
-border:none;
-border-radius:10px;
-background:#00ffd5;
-cursor:pointer;
-font-weight:bold;
 }
