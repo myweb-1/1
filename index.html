@@ -1,53 +1,8 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>A5hraf Portfolio</title>
-<link rel="stylesheet" href="style.css">
-</head>
-
-<body>
-
-<header>
-<div class="logo">A5hraf</div>
-<button onclick="toggleLang()">AR / EN</button>
-</header>
-
-<section>
-<h2 id="aboutTitle">About Me</h2>
-<p id="aboutText">
-I am a freelance designer specialized in web design, logo design, video editing, QR design.
-</p>
-</section>
-
-<section>
-<h2 id="servicesTitle">Services</h2>
-
-<div class="card">Web Design</div>
-<div class="card">Logo Design</div>
-<div class="card">Video Editing</div>
-<div class="card">QR Code Design</div>
-</section>
-
-<section>
-<h2>Tools I Use</h2>
-
-<div class="card">Canva Pro</div>
-<div class="card">CapCut Pro</div>
-<div class="card">VN Editor</div>
-<div class="card">GitHub</div>
-<div class="card">Blackbox AI</div>
-</section>
-
-<section>
-<h2>Order Service</h2>
-
 <form id="orderForm">
 
 <input type="text" id="name" placeholder="Your Name" required>
 
-<select id="service">
+<select id="service" required>
 <option value="">Choose Service</option>
 <option>Web Design</option>
 <option>Logo Design</option>
@@ -60,9 +15,3 @@ I am a freelance designer specialized in web design, logo design, video editing,
 <button type="submit">Send Request</button>
 
 </form>
-</section>
-
-<script src="script.js"></script>
-
-</body>
-</html>
