@@ -6,9 +6,15 @@ font-family:Arial, sans-serif;
 }
 
 body{
-color:white;
 background:#0a0a0a;
+color:white;
 overflow-x:hidden;
+
+/* كل شيء في النص */
+display:flex;
+flex-direction:column;
+align-items:center;
+text-align:center;
 }
 
 /* animated background */
@@ -31,6 +37,7 @@ z-index:-1;
 
 /* header */
 header{
+width:100%;
 display:flex;
 justify-content:space-between;
 align-items:center;
@@ -66,9 +73,13 @@ color:black;
 
 /* sections */
 section{
-max-width:1100px;
-margin:25px auto;
+width:90%;
+max-width:900px;
+margin:20px auto;
 padding:25px;
+display:flex;
+flex-direction:column;
+align-items:center;
 }
 
 .glass{
@@ -86,11 +97,6 @@ to{opacity:1;transform:translateY(0)}
 }
 
 /* hero */
-.hero{
-text-align:center;
-padding:60px 20px;
-}
-
 .hero h1{
 font-size:40px;
 color:#00ffd5;
@@ -101,27 +107,25 @@ color:#00ffd5;
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(150px,1fr));
 gap:12px;
-margin-top:15px;
+width:100%;
+justify-items:center;
 }
 
 /* cards */
-.card, .work-card{
+.card{
 background:rgba(255,255,255,0.05);
 border:1px solid rgba(255,255,255,0.1);
 padding:15px;
 border-radius:15px;
 text-align:center;
+width:100%;
+max-width:200px;
 transition:0.3s;
 }
 
-.card:hover, .work-card:hover{
+.card:hover{
 transform:translateY(-6px) scale(1.05);
 background:rgba(0,255,213,0.1);
-}
-
-.work-img{
-font-size:40px;
-margin-bottom:10px;
 }
 
 /* form */
@@ -133,6 +137,7 @@ border:none;
 border-radius:10px;
 background:rgba(255,255,255,0.05);
 color:white;
+text-align:center;
 }
 
 form button{
@@ -142,7 +147,6 @@ margin-top:10px;
 
 /* footer */
 footer{
-text-align:center;
-padding:20px;
+margin:20px;
 opacity:0.7;
 }
