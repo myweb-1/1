@@ -129,17 +129,30 @@ gap:12px;
 }
 
 /* الكروت أصغر شوية للموبايل */
+@media screen and (max-width: 768px){
+
+/* أهم حاجة: تمنع أي override */
+.grid{
+display:grid !important;
+grid-template-columns:repeat(2, 1fr) !important;
+gap:10px !important;
+}
+
+/* الكروت */
 .card{
-padding:15px;
-font-size:14px;
+padding:12px !important;
+font-size:13px !important;
 }
 
-/* النصوص أوضح */
-h2{
-font-size:20px;
+/* الأقسام */
+.section{
+margin:30px 10px !important;
+padding:15px !important;
 }
 
-p{
-font-size:14px;
+/* الهيرو */
+.hero h1{
+font-size:26px !important;
 }
+
 }
