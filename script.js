@@ -1,6 +1,6 @@
-// تغيير اللغة (اختياري تسيبه)
 let lang = "en";
 
+// translate
 function toggleLang(){
 if(lang === "en"){
 document.getElementById("aboutTitle").innerText = "من أنا";
@@ -11,12 +11,12 @@ lang = "ar";
 else{
 document.getElementById("aboutTitle").innerText = "About Me";
 document.getElementById("aboutText").innerText =
-"I am a freelance designer specialized in web design, logo design, video editing, QR design.";
+"I am a freelance designer specialized in modern web design, logo creation, video editing, and QR design.";
 lang = "en";
 }
 }
 
-// إرسال واتساب مباشر
+// whatsapp order
 document.addEventListener("DOMContentLoaded", function(){
 
 document.getElementById("orderForm").addEventListener("submit", function(e){
@@ -27,7 +27,7 @@ let service = document.getElementById("service").value;
 let desc = document.getElementById("desc").value;
 
 let message =
-`📌 New Order
+`🔥 New Project Request
 👤 Name: ${name}
 🛠 Service: ${service}
 📝 Description: ${desc}`;
