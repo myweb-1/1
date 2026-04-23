@@ -67,7 +67,37 @@ flex-direction:column;
 align-items:center;
 gap:10px;
 }
+/* الحاوية الكبيرة عشان الكروت تيجي جنب بعض */
+.tools-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* المسافة بين الكروت */
+    flex-wrap: wrap;
+}
 
+/* تصميم الكارت نفسه */
+.card {
+    background-color: #fff;       /* لون الخلفية أبيض */
+    border: 1px solid #eee;      /* برواز خفيف جداً */
+    border-radius: 15px;         /* حواف ناعمة */
+    padding: 20px;               /* مسافة داخلية */
+    width: 150px;                /* عرض موحد لكل الكروت */
+    text-align: center;          /* توسيط الكلام والأيقونة */
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05); /* ظل خفيف احترافي */
+}
+
+/* تنسيق الأيقونة جوه الكارت */
+.card img {
+    width: 50px;                 /* حجم موحد للأيقونات */
+    height: 50px;
+    margin-bottom: 10px;         /* مسافة بين الصورة والاسم */
+}
+
+.card p {
+    font-weight: bold;
+    margin: 0;
+    font-family: sans-serif;
+}
 .card i{
 font-size:28px;
 color:#2563eb;
