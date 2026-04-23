@@ -13,14 +13,19 @@ text-align:center;
 
 /* HEADER */
 header{
-padding:20px;
+display:flex;
+justify-content:center;
+align-items:center;
+padding:25px;
 background:white;
 border-bottom:1px solid #eee;
 }
 
 .logo{
-font-size:22px;
-font-weight:700;
+font-size:32px;
+font-weight:800;
+letter-spacing:2px;
+color:#2563eb;
 }
 
 /* HERO */
@@ -109,9 +114,51 @@ margin:40px;
 color:#777;
 }
 
+/* FLOATING SOCIAL */
+.floating-social{
+position:fixed;
+right:15px;
+bottom:20px;
+display:flex;
+flex-direction:column;
+gap:15px;
+z-index:999;
+}
+
+.floating-social a{
+width:45px;
+height:45px;
+display:flex;
+align-items:center;
+justify-content:center;
+border-radius:50%;
+color:white;
+font-size:18px;
+transition:0.3s;
+}
+
+/* Instagram */
+.floating-social a:nth-child(1){
+background:linear-gradient(45deg,#feda75,#d62976,#962fbf,#4f5bd5);
+}
+
+/* Facebook */
+.floating-social a:nth-child(2){
+background:#1877f2;
+}
+
+.floating-social a:hover{
+transform:scale(1.2);
+box-shadow:0 0 20px rgba(0,0,0,0.3);
+}
+
 /* MOBILE */
 @media (max-width:768px){
 .grid{
 grid-template-columns:repeat(2,1fr);
+}
+
+.hero h1{
+font-size:28px;
 }
 }
