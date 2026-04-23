@@ -83,7 +83,12 @@ color:#2563eb;
 transform:translateY(-10px);
 box-shadow:0 10px 25px rgba(0,0,0,0.1);
 }
-
+.card-text{
+font-size:14px;
+color:#555;
+line-height:1.6;
+margin-top:8px;
+}
 /* FORM */
 input,select,textarea{
 width:100%;
