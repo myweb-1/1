@@ -284,3 +284,16 @@ font-size:32px;
 font-weight:bold;
 color:#2563eb;
 }
+/* الكود ده هيلغي أي "فليكس" مخليهم جنب بعض ويخليهم تحت بعض */
+footer, .footer-container, section div { 
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    width: 100% !important;
+}
+
+/* عشان نضمن إن الصناديق ما تبقاش لازقة في بعضها */
+.footer-container > div, section > div {
+    margin-bottom: 30px;
+    width: 90%; /* عشان يكون شكلها متناسق */
+}
