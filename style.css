@@ -10,7 +10,11 @@ background:#f4f6fb;
 color:#111;
 text-align:center;
 }
-
+body {
+  margin: 0;
+  display: flex;
+  justify-content: center;
+}
 /* HEADER */
 header{
 display:flex;
@@ -72,7 +76,12 @@ border-radius:2px;
 }
 
 /* MOBILE */
-@media (max-width:768px){
+@media (max-width: 1200px) {
+  .container {
+    transform: scale(0.8);
+    transform-origin: top center;
+  }
+}
 
 nav{
 position:absolute;
@@ -94,7 +103,9 @@ display:flex;
 .menu-toggle{
 display:flex;
 }
-
+.container {
+  width: 1200px;   /* نفس التصميم دايماً */
+}
 /* HERO */
 .hero{
 padding:120px 20px;
