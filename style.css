@@ -243,3 +243,9 @@ footer {
     color: #777;
     font-size: 14px;
 }
+/* تنسيق خاص لأيقونة كانفا الجديدة */
+.canva-icon {
+    width: 32px; /* نفس متوسط حجم الأيقونات الزرقاء */
+    height: 32px;
+    margin-bottom: 10px; /* نفس المسافة */
+}
