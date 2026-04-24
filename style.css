@@ -234,7 +234,7 @@ button:hover {
 
 .floating-social a:nth-child(1) { background: linear-gradient(45deg,#feda75,#d62976,#962fbf,#4f5bd5); }
 .floating-social a:nth-child(2) { background: #1877f2; }
-
+.floating-social a:nth-child(3) {background: #0077b5;}
 .floating-social a:hover { transform: scale(1.1); }
 
 /* FOOTER */
