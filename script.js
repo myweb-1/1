@@ -1,4 +1,9 @@
-// Animated Text
+const toggle = document.getElementById("menu-toggle");
+const menu = document.getElementById("nav-menu");
+
+toggle.addEventListener("click", () => {
+menu.classList.toggle("active");
+});// Animated Text
 const texts = [
 "Create Digital Experiences",
 "Build Modern Websites",
