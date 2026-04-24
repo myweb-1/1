@@ -104,7 +104,14 @@ display:flex;
 display:flex;
 }
 .container {
-  width: 1200px;   /* نفس التصميم دايماً */
+  display: flex;
+  flex-direction: row;
+}
+
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+  }
 }
 /* HERO */
 .hero{
