@@ -1,94 +1,154 @@
 <!DOCTYPE html>
-<html lang="ar" dir="rtl">
+<html lang="en">
 <head>
+    <meta name="google-site-verification" content="T95z2PnbjhJevZQ97lMPPB5uS6H0OHu3gwSyQxSFgyw" />
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>A5hraf Studio | Portfolio</title>
+    <title>A5hraf Studio</title>
+    <meta name="description" content="الستوديو الشخصي لـ أشرف - مصمم ومطور مواقع الويب">
     
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    
-    <link rel="stylesheet" href="style.css"> 
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-2VNR2KBX72"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-2VNR2KBX72');
+    </script>
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <header>
-        <a href="#" class="logo">A5hraf Studio</a>
-        
-        <div class="menu-btn" onclick="toggleMenu()">
-            <i class="fas fa-bars"></i>
+<header>
+    <h1 class="logo">A5hraf</h1>
+    <div class="menu-toggle" id="menu-toggle">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+
+    <nav id="nav-menu">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#details">Details</a>
+        <a href="#tools">Tools</a>
+        <a href="#contact">Contact</a>
+    </nav>
+</header>
+
+<section class="hero" id="home">
+    <h1 id="animatedText">Create Digital Experiences</h1>
+    <p>I build modern websites, logos, and branding solutions</p>
+</section>
+
+<section class="section" id="about">
+    <h2>About Me</h2>
+    <p>Freelance designer specializing in modern UI/UX, branding and digital content creation.</p>
+</section>
+
+<section class="section" id="services">
+    <h2>Services</h2>
+    <div class="grid">
+        <div class="card">
+            <i class="fa-solid fa-globe"></i>
+            <h3>Web Design</h3>
         </div>
-        
-        <ul class="nav-links" id="navLinks">
-            <li><a href="#home" onclick="toggleMenu()">الرئيسية</a></li>
-            <li><a href="#about" onclick="toggleMenu()">عني</a></li>
-            <li><a href="#services" onclick="toggleMenu()">الخدمات</a></li>
-            <li><a href="#tools" onclick="toggleMenu()">البرامج</a></li>
-            <li><a href="#contact" onclick="toggleMenu()">تواصل معي</a></li>
-        </ul>
-    </header>
-
-    <section id="home" style="height: 100vh; display: flex; align-items: center; justify-content: center; background: #f4f4f4;">
-        <h1>مرحباً بك في معرض أعمالي</h1>
-    </section>
-
-    <section id="tools" class="tools-section">
-        <h2 class="section-title">البرامج التي أتقنها</h2>
-        <div class="tools-container">
-            
-            <div class="tool-card">
-                <i class="fab fa-adobe" style="color: #31A8FF;"></i>
-                <h3>Photoshop</h3>
-                <p>تصميم الجرافيك وتعديل الصور</p>
-            </div>
-
-            <div class="tool-card">
-                <i class="fas fa-video" style="color: #EA77FF;"></i>
-                <h3>Premiere Pro</h3>
-                <p>مونتاج الفيديو الاحترافي</p>
-            </div>
-
-            <div class="tool-card">
-                <i class="fas fa-magic" style="color: #CF96FD;"></i>
-                <h3>After Effects</h3>
-                <p>موشن جرافيك ومؤثرات بصرية</p>
-            </div>
-
-            <div class="tool-card">
-                <i class="fas fa-pen-nib" style="color: #FF9A00;"></i>
-                <h3>Illustrator</h3>
-                <p>تصميم اللوجوهات والفيكتور</p>
-            </div>
-
-            <div class="tool-card">
-                <i class="fas fa-film" style="color: #25F4EE;"></i>
-                <h3>CapCut / DaVinci</h3>
-                <p>صناعة المحتوى والمونتاج السريع</p>
-            </div>
-
+        <div class="card">
+            <i class="fa-solid fa-pen-nib"></i>
+            <h3>Logo Design</h3>
         </div>
-    </section>
+        <div class="card">
+            <i class="fa-solid fa-video"></i>
+            <h3>Video Editing</h3>
+        </div>
+        <div class="card">
+            <i class="fa-solid fa-qrcode"></i>
+            <h3>QR Design</h3>
+        </div>
+    </div>
+</section>
 
-    <section id="about" style="padding: 100px 5%;">
-        <h2>عن أشرف</h2>
-        <p>هنا يمكنك كتابة نبذة عن خبرتك في مجال الجرافيك والمونتاج.</p>
-    </section>
+<section class="section" id="details">
+    <h2>Service Details</h2>
+    <div class="details">
+        <div class="detail-box">
+            <h3>Web Design</h3>
+            <p>We create modern, responsive websites with advanced SEO to help your business rank higher on search engines.</p>
+        </div>
+        <div class="detail-box">
+            <h3>Logo Design</h3>
+            <p>We design unique and professional logos that represent your brand identity.</p>
+        </div>
+        <div class="detail-box">
+            <h3>Video Editing</h3>
+            <p>We provide high-quality video editing with smooth transitions and creative storytelling.</p>
+        </div>
+        <div class="detail-box">
+            <h3>QR Design</h3>
+            <p>We create smart QR codes linked to your website or social media.</p>
+        </div>
+    </div>
+</section>
 
-    <section id="services" style="padding: 100px 5%; background: #eee;">
-        <h2>خدماتي</h2>
-        <p>تقديم حلول بصرية مبتكرة.</p>
-    </section>
+<section class="section" id="tools">
+    <h2>Tools I Use</h2>
+    <div class="grid">
+        <div class="card"><i class="fa-brands fa-canva"></i><h3>Canva Pro</h3></div>
+        <div class="card"><i class="fa-solid fa-video"></i><h3>CapCut Pro</h3></div>
+        <div class="card"><i class="fa-solid fa-film"></i><h3>VN Editor</h3></div>
+        <div class="card"><i class="fa-solid fa-robot"></i><h3>Blackbox AI</h3></div>
+        <div class="card"><i class="fa-brands fa-github"></i><h3>GitHub</h3></div>
+        <div class="card"><i class="fa-brands fa-gitlab"></i><h3>GitLab</h3></div>
+    </div>
+</section>
 
-    <section id="contact" style="padding: 100px 5%;">
-        <h2>تواصل معي</h2>
-        <p>بريد إلكتروني: example@mail.com</p>
-    </section>
+<section class="section" id="contact">
+    <h2>Contact</h2>
+    <form id="orderForm">
+        <input type="text" id="name" placeholder="Your Name" required>
+        <select id="service" required>
+            <option value="">Select Service</option>
+            <option>Web Design</option>
+            <option>Logo Design</option>
+            <option>Video Editing</option>
+            <option>QR Design</option>
+        </select>
+        <textarea id="desc" placeholder="Project Details" required></textarea>
+        <button type="submit">Send via WhatsApp</button>
+    </form>
+</section>
 
-    <script>
-        function toggleMenu() {
-            const navLinks = document.getElementById('navLinks');
-            navLinks.classList.toggle('active');
-        }
-    </script>
+<footer>
+    <p>© 2023 A5hraf</p>
+</footer>
+
+<div class="floating-social">
+    <a href="https://www.instagram.com/_a5hraf_?igsh=N2FoYWNjeW95NWZn&utm_source=qr" target="_blank">
+        <i class="fa-brands fa-instagram"></i>
+    </a>
+    <a href="https://www.facebook.com/share/18hXhLjfi8/?mibextid=wwXIfr" target="_blank">
+        <i class="fa-brands fa-facebook-f"></i>
+    </a>
+</div>
+
+<script src="script.js"></script>
+
+<script>
+    const navLinks = document.querySelectorAll('#nav-menu a');
+    const menuToggle = document.getElementById('menu-toggle');
+    const navMenu = document.getElementById('nav-menu');
+
+    navLinks.forEach(link => {
+        link.addEventListener('click', () => {
+            // بنشيل كلاس active من القائمة ومن أيقونة الـ toggle عشان تقفل
+            navMenu.classList.remove('active');
+            menuToggle.classList.remove('active');
+        });
+    });
+</script>
 
 </body>
 </html>
