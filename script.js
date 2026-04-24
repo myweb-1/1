@@ -1,16 +1,16 @@
-const toggle = document.getElementById("menu-toggle");
-const menu = document.getElementById("nav-menu");
-
-toggle.addEventListener("click", () => {
-menu.classList.toggle("active");
-});// Animated Text
+// Animated Text
 const texts = [
 "Create Digital Experiences",
 "Build Modern Websites",
 "Design Powerful Brands",
 "A5hraf Studio"
 ];
+const toggle = document.getElementById("menu-toggle");
+const menu = document.getElementById("nav-menu");
 
+toggle.addEventListener("click", () => {
+menu.classList.toggle("active");
+});
 let i = 0;
 const el = document.getElementById("animatedText");
 
