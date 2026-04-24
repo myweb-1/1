@@ -45,15 +45,17 @@ font-weight:600;
 }
 
 /* MENU LINKS */
-nav{
-display:flex;
-gap:20px;
+nav {
+  display: flex;
+  justify-content: space-between; /* عشان يخلي اللوجو في طرف والقائمة في طرف */
+  align-items: center; /* عشان يخلي العناصر كلها على خط واحد بالعرض */
+  padding: 10px 20px;
 }
 
-nav a{
-text-decoration:none;
-color:#333;
-font-size:14px;
+.nav-links {
+  display: flex;
+  gap: 20px; /* بيعمل مسافة ثابتة بين اللينكات بدل ما يلزقوا في بعض */
+  list-style: none;
 }
 
 /* HAMBURGER */
