@@ -230,7 +230,7 @@ nav a:hover {
     transition: 0.4s;
 }
 
-/* تبديل الصورة عند الهوفر لو فيه صورة خلفية */
+/* تبديل الصورة عند الهوفر */
 .product-img-box .img-back {
     position: absolute;
     top: 0;
