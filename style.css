@@ -11,10 +11,8 @@
     <link rel="canonical" href="https://anger-wear.online/">
     
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
 
     <style>
-        /* الأساسيات */
         * {
             margin: 0;
             padding: 0;
@@ -297,31 +295,25 @@
 
         /* SOLD OUT STYLE */
         .product-card.sold-out {
-            opacity: 0.5;
-            cursor: not-allowed;
+            opacity: 0.6;
         }
 
-        .product-card.sold-out::after {
-            content: "SOLD OUT";
+        .sold-out-badge {
             position: absolute;
             top: 15px;
             right: 15px;
             background: #000;
-            color: #fff;
+            color: #ff3333;
             padding: 6px 12px;
             font-size: 11px;
             font-weight: bold;
             letter-spacing: 1px;
-            border: 1px solid rgba(255, 255, 255, 0.2);
+            border: 1px solid rgba(255, 51, 51, 0.4);
             z-index: 2;
+            border-radius: 4px;
         }
 
-        .product-card.sold-out:hover {
-            transform: none;
-            border-color: #222;
-        }
-
-        /* MODALS (BUY, FABRIC, ABOUT, PRODUCT MODAL, CART) */
+        /* MODALS */
         .product-modal-overlay, .buy-modal-overlay, .fabric-modal-overlay, .about-modal-overlay, .review-overlay, .cart-sidebar, .checkout-overlay {
             position: fixed;
             top: 0;
@@ -381,10 +373,6 @@
             color: #aaa;
             font-size: 22px;
             cursor: pointer;
-        }
-
-        .close-modal-btn:hover, .close-buy-btn:hover, .close-cart-btn:hover {
-            color: #fff;
         }
 
         /* FLOATING CART BUTTON */
@@ -458,11 +446,6 @@
             font-size: 15px;
         }
 
-        .form-group input:focus, .form-group textarea:focus {
-            border-color: #777;
-            outline: none;
-        }
-
         .modal-buy-now-btn, .modal-add-to-cart-btn, .checkout-btn, .submit-order-btn, .submit-review-btn {
             width: 100%;
             padding: 14px;
@@ -488,10 +471,6 @@
             background: transparent;
             color: #fff;
             border: 1px solid #444;
-        }
-
-        .modal-add-to-cart-btn:hover {
-            border-color: #fff;
         }
 
         /* FOOTER */
@@ -548,11 +527,6 @@
             text-decoration: none;
             font-size: 18px;
             border: 1px solid #333;
-            transition: 0.3s;
-        }
-
-        .footer-socials-row a:hover {
-            background: #333;
         }
 
         .footer-copyright {
@@ -576,7 +550,6 @@
             align-items: center;
         }
 
-        /* Responsive */
         @media(max-width: 768px) {
             .products-grid {
                 grid-template-columns: repeat(2, 1fr);
@@ -613,35 +586,30 @@
             <a href="#">Products</a>
             <a href="#" onclick="openFabricModal(event)">Fabric Info</a>
             <a href="#" onclick="openAboutModal(event)">About Us (The Abyss)</a>
-            
             <hr class="menu-divider">
-            
             <div class="complaints-section">
                 <span class="complaints-title">💀 Support & Complaints</span>
                 <div class="complaints-buttons">
-                    <a href="https://wa.me/201275859172?text=I%20have%20a%20complaint%20or%20inquiry%20regarding%20%CE%9B%20%D0%98%20G%20E%20%D0%Я" target="_blank" class="complaint-btn wa-btn">
-                        💬 WhatsApp Support
-                    </a>
-                    <a href="tel:+201275859172" class="complaint-btn call-btn">
-                        📞 Direct Call
-                    </a>
+                    <a href="https://wa.me/201275859172?text=I%20have%20a%20complaint%20or%20inquiry" target="_blank" class="complaint-btn wa-btn">💬 WhatsApp Support</a>
+                    <a href="tel:+201275859172" class="complaint-btn call-btn">📞 Direct Call</a>
                 </div>
             </div>
         </div>
     </div>
 
+    <!-- Modals Info -->
     <div class="buy-modal-overlay" id="buyModal" onclick="closeBuyModalOnOutsideClick(event)">
         <div class="buy-modal-content">
             <button class="close-buy-btn" onclick="closeBuyModal()">✕</button>
             <h3 class="buy-title">⚡ طريقة الشراء والاستلام</h3>
-            <div class="buy-steps-content" style="margin-top: 20px;">
-                <div class="step-item" style="margin-bottom: 15px;">
+            <div style="margin-top: 20px;">
+                <div style="margin-bottom: 15px;">
                     <h4>أولاً: تأكيد الطلب</h4>
-                    <p style="color:#aaa; font-size:14px;">بعد إتمام طلبك، سيقوم أحد ممثلي خدمة العملاء بالتواصل معك هاتفياً أو عبر الواتساب لتأكيد البيانات والمقاس المختار.</p>
+                    <p style="color:#aaa; font-size:14px;">بعد إتمام طلبك، سيقوم ممثل خدمة العملاء بالتواصل معك هاتفياً أو عبر الواتساب لتأكيد البيانات.</p>
                 </div>
-                <div class="step-item">
+                <div>
                     <h4>ثانياً: التوصيل والشحن</h4>
-                    <p style="color:#aaa; font-size:14px;">يتم تجهيز طلبك بعناية وشحنه ليصلك حتى باب البيت في خلال <strong>من 3 إلى 7 أيام عمل</strong> كحد أقصى.</p>
+                    <p style="color:#aaa; font-size:14px;">يتم تجهيز طلبك وشحنه ليصلك حتى باب البيت خلال <strong>من 3 إلى 7 أيام عمل</strong>.</p>
                 </div>
             </div>
         </div>
@@ -651,14 +619,13 @@
         <div class="fabric-modal-content">
             <button class="close-fabric-btn" onclick="closeFabricModal()">✕</button>
             <h3 class="fabric-title">🔥 Λ И G E Я Fabric Specs</h3>
-            <p class="fabric-subtitle" style="color:#aaa; font-size:14px; margin: 10px 0 20px 0;">Compression t-shirts engineered for maximum performance:</p>
-            
-            <div class="fabric-features">
-                <div class="feature-item" style="margin-bottom: 15px;">
+            <p style="color:#aaa; font-size:14px; margin: 10px 0 20px 0;">Compression t-shirts engineered for maximum performance:</p>
+            <div>
+                <div style="margin-bottom: 15px;">
                     <h4 style="font-size:15px;">🛡️ High Compression & Flexibility</h4>
                     <p style="color:#aaa; font-size:13px;">Provides optimal muscle pressure to improve circulation and reduce fatigue.</p>
                 </div>
-                <div class="feature-item" style="margin-bottom: 15px;">
+                <div>
                     <h4 style="font-size:15px;">💧 Dry-Fit Sweat Wicking</h4>
                     <p style="color:#aaa; font-size:13px;">Advanced moisture-wicking technology pulls sweat away from your skin.</p>
                 </div>
@@ -670,9 +637,9 @@
         <div class="about-modal-content">
             <button class="close-about-btn" onclick="closeAboutModal()">✕</button>
             <h3 class="about-title">💀 WELCOME TO THE ABYSS</h3>
-            <div class="about-text-content" style="margin-top: 15px;">
-                <p class="about-p" style="color:#aaa; font-size:14px; line-height:1.6;">
-                    <strong>Λ И G E Я</strong> is the final sanctuary for those fueled by pain, those who make heavy iron their personal symphony. We are here to transform your suppressed rage into a devastating force that breaks all limits.
+            <div style="margin-top: 15px;">
+                <p style="color:#aaa; font-size:14px; line-height:1.6;">
+                    <strong>Λ И G E Я</strong> is the final sanctuary for those fueled by pain, those who make heavy iron their personal symphony.
                 </p>
             </div>
         </div>
@@ -682,8 +649,7 @@
         <div class="review-modal">
             <button class="close-review-modal-btn" onclick="closeReviewAndReset()">✕</button>
             <h3 class="review-title">🔥 Join The Elite</h3>
-            <p class="review-subtitle" style="color:#aaa; font-size:13px; margin-bottom:15px;">How was your experience with Λ И G E Я gear?</p>
-            
+            <p style="color:#aaa; font-size:13px; margin-bottom:15px;">How was your experience with Λ И G E Я gear?</p>
             <div class="form-group">
                 <label>Your Full Name</label>
                 <input type="text" id="reviewerName" placeholder="e.g., John Doe">
@@ -692,7 +658,7 @@
                 <label>Your Review Message</label>
                 <textarea id="reviewText" placeholder="What does it feel like to wear your rage?..."></textarea>
             </div>
-            <button type="button" class="submit-review-btn" id="submitReviewBtn" onclick="submitReview()">Submit to The Abyss</button>
+            <button type="button" class="submit-review-btn" onclick="submitReview()">Submit to The Abyss</button>
         </div>
     </div>
 
@@ -710,7 +676,8 @@
         <div class="products-grid">
             
             <!-- DROP 01: Sold Out -->
-            <div class="product-card sold-out" onclick="openProductModal(1, 'COMPRESSION DROP 01', 450, 'prod1-front.jpg', 'prod1-back.jpg')">
+            <div class="product-card sold-out" onclick="openProductModal(1, 'COMPRESSION DROP 01', 450, true)">
+                <div class="sold-out-badge">SOLD OUT</div>
                  <div class="product-img-box">
                     <img src="prod1-front.jpg" alt="Anger" class="img-front" onerror="this.src='https://via.placeholder.com/400x500/181818/ffffff?text=DROP+01'">
                     <img src="prod1-back.jpg" alt="Anger" class="img-back" onerror="this.src='https://via.placeholder.com/400x500/222222/ffffff?text=DROP+01+BACK'">
@@ -722,7 +689,8 @@
             </div>
 
             <!-- DROP 02: Sold Out -->
-            <div class="product-card sold-out" onclick="openProductModal(2, 'COMPRESSION DROP 02', 450, 'prod2-front.jpg', 'prod2-back.jpg')">
+            <div class="product-card sold-out" onclick="openProductModal(2, 'COMPRESSION DROP 02', 450, true)">
+                <div class="sold-out-badge">SOLD OUT</div>
                 <div class="product-img-box">
                     <img src="prod2-front.jpg" alt="Anger" class="img-front" onerror="this.src='https://via.placeholder.com/400x500/181818/ffffff?text=DROP+02'">
                     <img src="prod2-back.jpg" alt="Anger" class="img-back" onerror="this.src='https://via.placeholder.com/400x500/222222/ffffff?text=DROP+02+BACK'">
@@ -734,7 +702,7 @@
             </div>
 
             <!-- DROP 03: Available -->
-            <div class="product-card" onclick="openProductModal(3, 'COMPRESSION DROP 03', 450, 'prod3-front.jpg', 'prod3-back.jpg')">
+            <div class="product-card" onclick="openProductModal(3, 'COMPRESSION DROP 03', 450, false)">
                 <div class="product-img-box">
                     <img src="prod3-front.jpg" alt="Anger" class="img-front" onerror="this.src='https://via.placeholder.com/400x500/181818/ffffff?text=DROP+03'">
                     <img src="prod3-back.jpg" alt="Anger" class="img-back" onerror="this.src='https://via.placeholder.com/400x500/222222/ffffff?text=DROP+03+BACK'">
@@ -746,7 +714,8 @@
             </div>
 
             <!-- DROP 04: Sold Out -->
-            <div class="product-card sold-out" onclick="openProductModal(4, 'COMPRESSION DROP 04', 450, 'prod4-front.jpg', 'prod4-back.jpg')">
+            <div class="product-card sold-out" onclick="openProductModal(4, 'COMPRESSION DROP 04', 450, true)">
+                <div class="sold-out-badge">SOLD OUT</div>
                 <div class="product-img-box">
                     <img src="prod4-front.jpg" alt="Anger" class="img-front" onerror="this.src='https://via.placeholder.com/400x500/181818/ffffff?text=DROP+04'">
                     <img src="prod4-back.jpg" alt="Anger" class="img-back" onerror="this.src='https://via.placeholder.com/400x500/222222/ffffff?text=DROP+04+BACK'">
@@ -758,7 +727,8 @@
             </div>
 
             <!-- DROP 05: Sold Out -->
-            <div class="product-card sold-out" onclick="openProductModal(5, 'COMPRESSION DROP 05', 450, 'prod5-front.jpg', 'prod5-back.jpg')">
+            <div class="product-card sold-out" onclick="openProductModal(5, 'COMPRESSION DROP 05', 450, true)">
+                <div class="sold-out-badge">SOLD OUT</div>
                 <div class="product-img-box">
                     <img src="prod5-front.jpg" alt="Anger" class="img-front" onerror="this.src='https://via.placeholder.com/400x500/181818/ffffff?text=DROP+05'">
                     <img src="prod5-back.jpg" alt="Anger" class="img-back" onerror="this.src='https://via.placeholder.com/400x500/222222/ffffff?text=DROP+05+BACK'">
@@ -770,7 +740,8 @@
             </div>
 
             <!-- DROP 06: Sold Out -->
-            <div class="product-card sold-out" onclick="openProductModal(6, 'COMPRESSION DROP 06', 450, 'prod6-front.jpg', 'prod6-back.jpg')">
+            <div class="product-card sold-out" onclick="openProductModal(6, 'COMPRESSION DROP 06', 450, true)">
+                <div class="sold-out-badge">SOLD OUT</div>
                 <div class="product-img-box">
                     <img src="prod6-front.jpg" alt="Anger" class="img-front" onerror="this.src='https://via.placeholder.com/400x500/181818/ffffff?text=DROP+06'">
                     <img src="prod6-back.jpg" alt="Anger" class="img-back" onerror="this.src='https://via.placeholder.com/400x500/222222/ffffff?text=DROP+06+BACK'">
@@ -782,7 +753,7 @@
             </div>
 
             <!-- DROP 07: Available -->
-            <div class="product-card" onclick="openProductModal(7, 'COMPRESSION DROP 07', 450, 'prod7-front.jpg', 'prod7-back.jpg')">
+            <div class="product-card" onclick="openProductModal(7, 'COMPRESSION DROP 07', 450, false)">
                 <div class="product-img-box">
                     <img src="prod7-front.jpg" alt="Anger" class="img-front" onerror="this.src='https://via.placeholder.com/400x500/181818/ffffff?text=DROP+07'">
                     <img src="prod7-back.jpg" alt="Anger" class="img-back" onerror="this.src='https://via.placeholder.com/400x500/222222/ffffff?text=DROP+07+BACK'">
@@ -794,7 +765,7 @@
             </div>
 
             <!-- DROP 08: Available -->
-            <div class="product-card" onclick="openProductModal(8, 'COMPRESSION DROP 08', 450, 'prod8-front.jpg', 'prod8-back.jpg')">
+            <div class="product-card" onclick="openProductModal(8, 'COMPRESSION DROP 08', 450, false)">
                 <div class="product-img-box">
                     <img src="prod8-front.jpg" alt="Anger" class="img-front" onerror="this.src='https://via.placeholder.com/400x500/181818/ffffff?text=DROP+08'">
                     <img src="prod8-back.jpg" alt="Anger" class="img-back" onerror="this.src='https://via.placeholder.com/400x500/222222/ffffff?text=DROP+08+BACK'">
@@ -817,12 +788,10 @@
                 <a href="#" onclick="openFabricModal(event)">Fabric Info</a>
                 <a href="#" onclick="openAboutModal(event)">About Us</a>
             </div>
-            
             <div class="footer-socials-row">
                 <a href="https://www.instagram.com/anger.wear_1" target="_blank"><i class="fa-brands fa-instagram"></i></a>
                 <a href="https://wa.me/201275859172" target="_blank"><i class="fa-brands fa-whatsapp"></i></a>
             </div>
-
             <p class="footer-copyright">&copy; 2026 Λ И G E Я. Built from anger.</p>
         </div>
         <button class="scroll-top-btn" onclick="scrollToTop()">▲</button>
@@ -835,16 +804,7 @@
             <h2 id="modalProductTitle" style="font-size:20px; margin-bottom:10px;"></h2>
             <div id="modalProductPrice" style="font-size:16px; margin-bottom:20px; color:#aaa;"></div>
             
-            <div style="margin-bottom:15px; font-size:14px; color:#aaa;">Select Size:</div>
-            <div style="display:flex; gap:10px; margin-bottom:20px;">
-                <label><input type="radio" name="modal-size" value="M" checked> M</label>
-                <label><input type="radio" name="modal-size" value="L"> L</label>
-                <label><input type="radio" name="modal-size" value="XL"> XL</label>
-                <label><input type="radio" name="modal-size" value="XXL"> XXL</label>
-            </div>
-
-            <button id="modalBuyNowBtn" class="modal-buy-now-btn" onclick="buyItNowFromModal()">Buy It Now</button>
-            <button id="modalAddToCartBtn" class="modal-add-to-cart-btn" onclick="addFromModalToCart()">Add To Cart</button>
+            <div id="modalActionArea"></div>
         </div>
     </div>
 
@@ -928,12 +888,39 @@
         function toggleCart() { document.getElementById('cartSidebar').classList.toggle('active'); }
         function scrollToTop() { window.scrollTo({ top: 0, behavior: 'smooth' }); }
 
-        function openProductModal(id, name, price, frontImg, backImg) {
-            currentModalProductId = id; currentModalProductName = name; currentModalProductPrice = price;
+        function openProductModal(id, name, price, isSoldOut) {
+            currentModalProductId = id; 
+            currentModalProductName = name; 
+            currentModalProductPrice = price;
+            
             document.getElementById('modalProductTitle').innerText = name;
-            document.getElementById('modalProductPriceinnerHTML', `${price} EGP`);
+            document.getElementById('modalProductPrice').innerText = `${price} EGP`;
+            
+            const actionArea = document.getElementById('modalActionArea');
+            
+            if (isSoldOut) {
+                actionArea.innerHTML = `
+                    <div style="background: #2a1111; border: 1px solid #ff3333; color: #ff6666; padding: 15px; border-radius: 8px; text-align: center; font-weight: bold; letter-spacing: 1px;">
+                        THIS ITEM IS SOLD OUT
+                    </div>
+                `;
+            } else {
+                actionArea.innerHTML = `
+                    <div style="margin-bottom:15px; font-size:14px; color:#aaa;">Select Size:</div>
+                    <div style="display:flex; gap:10px; margin-bottom:20px;">
+                        <label><input type="radio" name="modal-size" value="M" checked> M</label>
+                        <label><input type="radio" name="modal-size" value="L"> L</label>
+                        <label><input type="radio" name="modal-size" value="XL"> XL</label>
+                        <label><input type="radio" name="modal-size" value="XXL"> XXL</label>
+                    </div>
+                    <button class="modal-buy-now-btn" onclick="buyItNowFromModal()">Buy It Now</button>
+                    <button class="modal-add-to-cart-btn" onclick="addFromModalToCart()">Add To Cart</button>
+                `;
+            }
+            
             document.getElementById('productModal').classList.add('active');
         }
+
         function closeProductModal() { document.getElementById('productModal').classList.remove('active'); }
         function closeProductModalOnOutsideClick(e) { if(e.target.id === 'productModal') closeProductModal(); }
 
